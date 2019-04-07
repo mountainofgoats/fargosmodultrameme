@@ -1,0 +1,3 @@
+author = catsounds, Mako-Z, scratchock
+version = 0.1
+displayName = Fargo's Soul Mod++ DLC Funky Mode Meme Edition
