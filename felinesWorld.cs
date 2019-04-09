@@ -1,4 +1,5 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
