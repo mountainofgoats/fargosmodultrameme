@@ -1,3 +1,8 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using Terraria.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -13,10 +18,16 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Buffs
             Main.debuff[Type] = true;
         }
 
-        public override void Update(Player player, ref int buffIndex)
+        public override void Update(int buff, Player player, ref int buffIndex)
         {
-            player.statLife /= 2;
-            player.lifeRegen -= 3;
+
+            if (player.statLife % 2 != 0)
+                player.statLife = (player.statLife + 1) / 2;
+            else
+                player.statLife /= 2;
+
+            player.lifeRegen -= 2;
+
             player.statDefense -= 5;
         }
     }

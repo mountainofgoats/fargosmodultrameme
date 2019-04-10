@@ -111,6 +111,5 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Souls
         {
             return true;
         }
-        
     }
 }
