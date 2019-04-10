@@ -30,7 +30,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             }
         }
         
-                public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
+        public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
         {
             Item item = new Item();
             item.SetDefaults(mod.ItemType("MasochistEX"));
