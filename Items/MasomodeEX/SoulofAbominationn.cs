@@ -46,12 +46,12 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
             if (!felinesWorld.masoEX)
             {
                 felinesWorld.masoEX = true;
-                Main.NewText("An annihilation was bringed to the world...", 188, 253, 68);
+                Main.NewText("Masochist Mode EX enabled.", 188, 253, 68);
             }
             else
             {
                 felinesWorld.masoEX = false;
-                Main.NewText("The world was saved from an annihilation...", 188, 253, 68);
+                Main.NewText("Masochist Mode EX disabled.", 188, 253, 68);
             }
             return true;
         }
