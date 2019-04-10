@@ -18,9 +18,5 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
                     player.AddBuff(mod.BuffType("HighTemperature"), 2);
             }
         }
-
-        public override void PostUpdateBuffs()
-        {
-        }
     }
 }
