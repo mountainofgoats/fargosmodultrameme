@@ -12,5 +12,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Buffs
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = true;
         }
+        
+        public override bool Autoload(ref string name, ref string texture)
+        {
+            texture = "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Buffs/PlaceholderDebuff";
+            return true;
+        }
     }
 }
