@@ -15,7 +15,12 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
                 {
                     player.AddBuff(FargowiltasSouls.BuffType("Lethargic"), 2);
                 }
+
+                if (player.ZoneUnderworldHeight)
+                {
+                    player.AddBuff(mod.BuffType("HighTemperature"), 10000);
+                }
             }
         }
     }
-}
+

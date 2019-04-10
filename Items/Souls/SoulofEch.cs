@@ -95,32 +95,15 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Souls
             i++;
             item.stack++;
 
-
-            if (!Main.hardMode)
+            if (i < 14)
             {
-                if (i < 14)
-                {
-                    Main.NewText("Do not anger the ECH!", 255, 0, 0);
-                }
-                else if (i == 15)
-                {
-                    Main.NewText("You have brought this upon yourself...", 255, 0, 0);
-                    NPC.SpawnOnPlayer(player.whoAmI, NPCID.MoonLord);
-                    i = 0;
-                }
+                Main.NewText("Do not anger the ECH!", 255, 0, 0);
             }
-            else if (Main.hardMode)
+            else if (i == 15)
             {
-                if (i < 14)
-                {
-                    Main.NewText("Do not anger the ECH!", 255, 0, 0);
-                }
-                else if (i == 15)
-                {
-                    Main.NewText("You have brought this upon yourself...", 255, 0, 0);
-                    NPC.SpawnOnPlayer(player.whoAmI, NPCID.MoonLord);
-                    i = 0;
-                }
+                Main.NewText("You have brought this upon yourself...", 255, 0, 0);
+                NPC.SpawnOnPlayer(player.whoAmI, NPCID.MoonLordCore);
+                i = 0;
             }
         }
 
