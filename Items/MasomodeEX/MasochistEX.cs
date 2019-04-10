@@ -6,6 +6,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
     public class MasochistEX : ModItem
     {
+        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlacheholderItem";
+        
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Abominationn's Gift");
