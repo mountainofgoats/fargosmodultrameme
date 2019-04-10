@@ -10,21 +10,21 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Accessories
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Frigid Barrier");
-			Tooltip.SetDefault("'Made from magical unmelting snow'");
+			Tooltip.SetDefault("Immunity to High Temperature\n'Made from magical unmelting snow'");
 		}
+		
 		public override void SetDefaults()
 		{
-            item.accessory = true;
-            item.defense = 1;
+                        item.width = 50;
+            		item.height = 50;
+			item.accessory = true;
+            		item.defense = 5;
+			item.rare = 1;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
+		
+		public override void UpdateAccessory(Player player, bool hideVisual)
+        	{
+            		player.buffImmune[mod.BuffType("HighTemperature")] = true;
+       		}
 	}
 }
