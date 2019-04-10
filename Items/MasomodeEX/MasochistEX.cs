@@ -1,28 +1,15 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
-    public class SoulofAbominationn : ModItem
+    public class MasochistEX : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Soul of Abominationn");
-            Tooltip.SetDefault("Brings complete annihilation over the world\nUse with care");
-        }
-
-        public override void ModifyTooltips(List<TooltipLine> list)
-        {
-            foreach (TooltipLine tooltipLine in list)
-            {
-                if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
-                {
-                    tooltipLine.overrideColor = new Color?(new Color(188, 253, 68));
-                }
-            }
+            DisplayName.SetDefault("Abominationn's Gift");
+            Tooltip.SetDefault("Activates/Deactivates Masochist Mode EX");
         }
 
         public override void SetDefaults()
@@ -33,6 +20,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
             item.useTime = 45;
             item.useAnimation = 45;
             item.useStyle = 4;
+            item.rare = 1;
             item.UseSound = SoundID.Item44;
         }
 
@@ -46,12 +34,12 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
             if (!felinesWorld.masoEX)
             {
                 felinesWorld.masoEX = true;
-                Main.NewText("Masochist Mode EX enabled.", 188, 253, 68);
+                Main.NewText("Masochist Mode EX enabled.", 175, 55);
             }
             else
             {
                 felinesWorld.masoEX = false;
-                Main.NewText("Masochist Mode EX disabled.", 188, 253, 68);
+                Main.NewText("Masochist Mode EX disabled.", 175, 55);
             }
             return true;
         }
