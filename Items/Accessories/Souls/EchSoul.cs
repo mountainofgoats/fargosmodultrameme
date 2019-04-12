@@ -51,7 +51,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Accessories.Souls
             player.statManaMax2 += 200;
 
             //speed boosts
-            player.accRunSpeed += 30f;
+            player.accRunSpeed += 15f;
 
             //melee stats
             player.kbGlove = true;
