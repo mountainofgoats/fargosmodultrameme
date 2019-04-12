@@ -35,8 +35,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Accessories.Souls
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            felinesPlayer modPlayer = player.GetModPlayer<felinesPlayer>(mod);
-
             //endurance stats
             player.endurance += 0.30f;
             player.starCloak = true;
