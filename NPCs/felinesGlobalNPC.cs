@@ -15,7 +15,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                     case NPCID.CultistBoss:
                         npc.lifeMax *= 3;
                         npc.damage *= 3;
-                        npc.defense *= 2;
                         break;
                     default:
                         break;
