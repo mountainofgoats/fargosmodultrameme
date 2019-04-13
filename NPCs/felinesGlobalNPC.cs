@@ -13,7 +13,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                 switch (npc.type)
                 {
                     case NPCID.CultistBoss:
-                        npc.lifeMax *= 4;
+                        npc.lifeMax *= 3;
                         npc.damage *= 3;
                         npc.defense *= 2;
                         break;
