@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
-    public class FelinesWorld : ModWorld
+    public class MyWorld : ModWorld
     {
         public static bool masoEX;
         
