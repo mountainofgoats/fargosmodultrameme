@@ -25,6 +25,16 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                         npc.damage *= 2;
                         npc.defense = 10;
                         break;
+                    case NPCID.EyeofCthulhu:
+                        npc.lifeMax *= 2;
+                        npc.damage *= 3;
+                        npc.defense = 15;
+                        break;
+                    case NPCID.ServantofCthulhu:
+                        npc.lifeMax *= 10;
+                        npc.damage *= 4;
+                        npc.defense = 15;                        
+                        break;
                 }
             }
         }
