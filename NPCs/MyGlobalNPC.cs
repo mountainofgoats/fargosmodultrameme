@@ -21,19 +21,26 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                 switch (npc.type)
                 {
                     case NPCID.KingSlime:
-                        npc.lifeMax *= 2;
-                        npc.damage *= 2;
+                        npc.lifeMax *= 2; //5600
+                        npc.damage *= 2; //128
                         npc.defense = 10;
                         break;
                     case NPCID.EyeofCthulhu:
-                        npc.lifeMax *= 2;
-                        npc.damage *= 2;
+                        npc.lifeMax *= 2; //7280
+                        npc.damage *= 2; //60
                         npc.defense = 10;
                         break;
                     case NPCID.ServantofCthulhu:
-                        npc.lifeMax *= 5;
-                        npc.damage *= 2;
+                        npc.lifeMax *= 5; //60
+                        npc.damage *= 2; //48
                         npc.defense = 10;                        
+                        break;
+                    case NPCID.EaterofWorldsHead:
+                    case NPCID.EaterofWorldsBody:
+                    case NPCID.EaterofWorldsTail:
+                        npc.lifeMax = 350; //489
+                        npc.damage = 40; //88
+                        npc.defense = 10; //12
                         break;
                 }
             }
@@ -91,6 +98,29 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                             npc.damage *= 2;
                             Counter2 += 1f;
                         }
+                    case NPCID.EaterofWorldsBody:
+                        Counter++;
+                        if (Counter >= 420f && Main.rand.Next(200) == 0) //very low chance to avoid spam
+                        {
+                            Vector2 velocity = player.Center - npc.Center;
+                            float magnitude = (float)Math.Sqrt(velocity.X * velocity.X + velocity.Y * velocity.Y); 
+                            if (magnitude > 0)
+                            {
+                                velocity *= 10f / magnitude;
+                            }
+                            else
+                            {
+                                velocity = new Vector2(0f, 10f);
+                            }
+                            Projectile.NewProjectile(npc.Center, velocity, ProjectileID.CursedFlameHostile, 20, 0f);
+                            Counter = 0f;
+                        }
+                        Counter2++;
+                        if (Counter2 >= 300f && Main.rand.Next(1500) == 0) //very low chance to avoid spam
+                        {
+                            NPC.NewNPC((int)npc.Center.X, (int)npc.Center.Y, NPCID.EaterofSouls);
+                            Counter2 = 0f;
+                        }
                         break;
                 }
             }
@@ -108,21 +138,31 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                     case NPCID.EyeofCthulhu:
                         target.AddBuff(BuffID.Obstructed, Main.rand.Next(60, 120));
                         break;
+                    case NPCID.EaterofWorldsHead:
+                    case NPCID.EaterofWorldsBody:
+                    case NPCID.EaterofWorldsTail:
+                        target.AddBuff(BuffID.WitheredArmor, Main.rand.Next(120, 180));
+                        target.AddBuff(BuffID.WitheredWeapon, Main.rand.Next(120, 180));
+                        break;
                 }
             }
         }
 
-        public override void NPCLoot(NPC npc)
+        public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             if (MyWorld.masoEX)
             {
                 switch (npc.type)
                 {
-                    case NPCID.KingSlime:
-                        Item.NewItem(npc.getRect(), mod.ItemType("SlimyShield"));
-                        break;
-                    case NPCID.EyeofCthulhu:
-                        Item.NewItem(npc.getRect(), mod.ItemType("CoreofEvil"));
+                    case NPCID.EaterofWorldsHead:
+                    case NPCID.EaterofWorldsBody:
+                    case NPCID.EaterofWorldsTail:
+                        if (projectile.penetrate > 1 || projectile.penetrate == -1)
+                        {
+                            damage = 0;
+                            crit = false;
+                            knockback = 0f;
+                        }
                         break;
                 }
             }
