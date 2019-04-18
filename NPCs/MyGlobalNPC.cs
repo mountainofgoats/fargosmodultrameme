@@ -27,13 +27,13 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                         break;
                     case NPCID.EyeofCthulhu:
                         npc.lifeMax *= 2;
-                        npc.damage *= 3;
-                        npc.defense = 15;
+                        npc.damage *= 2;
+                        npc.defense = 10;
                         break;
                     case NPCID.ServantofCthulhu:
-                        npc.lifeMax *= 10;
-                        npc.damage *= 4;
-                        npc.defense = 15;                        
+                        npc.lifeMax *= 5;
+                        npc.damage *= 2;
+                        npc.defense = 10;                        
                         break;
                 }
             }
@@ -88,7 +88,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                         if (EoCPhase2)
                         {
                             player.AddBuff(mod.BuffType("CthulhusAura"), 2);
-                            npc.damage *= 3;
+                            npc.damage *= 2;
                             Counter2 += 1f;
                         }
                         break;
