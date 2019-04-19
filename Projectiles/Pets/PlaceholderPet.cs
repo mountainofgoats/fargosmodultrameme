@@ -6,7 +6,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles.Pets
 {
     public class PlaceholderPet : ModProjectile
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderProjectile";
 
         public override void SetStaticDefaults()
         {
