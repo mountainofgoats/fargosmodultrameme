@@ -15,7 +15,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
         
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
-            if (MyWorld.masoEX)
+            if (MyWorld.MasomodeEX)
             {
                 switch (arg)
                 {
