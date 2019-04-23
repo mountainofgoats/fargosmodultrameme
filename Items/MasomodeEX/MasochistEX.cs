@@ -33,14 +33,14 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override bool UseItem(Player player)
         {
-            if (!MyWorld.masoEX)
+            if (!MyWorld.MasomodeEX)
             {
-                MyWorld.masoEX = true;
+                MyWorld.MasomodeEX = true;
                 Main.NewText("Masochist Mode EX enabled.", 175, 55);
             }
             else
             {
-                MyWorld.masoEX = false;
+                MyWorld.MasomodeEX = false;
                 Main.NewText("Masochist Mode EX disabled.", 175, 55);
             }
             return true;
