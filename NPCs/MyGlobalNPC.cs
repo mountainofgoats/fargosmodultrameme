@@ -144,7 +144,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                         Item.NewItem(npc.getRect(), mod.ItemType("BeenadeLauncher"));
                     break;               
             }
-            if (player.ZoneBeach && npc.lifeMax > 5 && !npc.friendly && Main.hardMode)
+            if (player.ZoneBeach && npc.lifeMax > 5 && !npc.friendly && Main.hardMode && NPC.downedGolemBoss)
             {
                 if (Main.rand.Next(100) == 0)
                     Item.NewItem(npc.getRect(), mod.ItemType("WaterEssence"));
