@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
@@ -32,6 +35,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             Item item = new Item();
             item.SetDefaults(mod.ItemType("Placeholder"));
             items.Add(item);
+            Item item2 = new Item();
+            item2.SetDefaults(mod.ItemType("MasochistEX"));
+            items.Add(item2);
         }
     }
 }
