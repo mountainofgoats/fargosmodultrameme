@@ -133,5 +133,22 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                 }
             }
         }
+        
+        public override void NPCLoot(NPC npc)
+        {
+            Player player = Main.player[Main.myPlayer];
+            switch (npc.type)
+            {
+                case NPCID.QueenBee:
+                    if (Main.rand.Next(10) == 0)
+                        Item.NewItem(npc.getRect(), mod.ItemType("BeenadeLauncher"));
+                    break;               
+            }
+            if (player.ZoneBeach && npc.lifeMax > 5 && !npc.friendly && Main.hardMode)
+            {
+                if (Main.rand.Next(100) == 0)
+                    Item.NewItem(npc.getRect(), mod.ItemType("WaterEssence"));
+            }
+        }
     }
 }
