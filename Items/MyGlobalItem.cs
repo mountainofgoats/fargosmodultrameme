@@ -5,7 +5,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 {
     public class MyGlobalItem : GlobalItem
     {
-        public override bool CanUseItem(Item item, Player player)
+        public override bool CanUseItem(Item item, Player player) //LULLLLLLLLLLLLL
         {
             MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
             if (modPlayer.CthulhusAura && item.healLife > 0)
