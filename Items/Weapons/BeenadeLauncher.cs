@@ -35,17 +35,18 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
 		{
 			int AmountControl = player.FindItem(ItemID.Beenade);
 
-			if (player.HasItem(ItemID.Beenade))
-			{
-				player.inventory[AmountControl].stack -= 2;
-				Projectile.NewProjectile(player.position.X, player.position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+			player.inventory[AmountControl].stack -= 2;
+
+			Projectile.NewProjectile(player.position.X, player.position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
+
+			return true;
 		}
+
+		public override bool CanUseItem(Player player)
+		{
+			return player.HasItem(ItemID.Beenade);
+		}
+
 		public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(-10, 0);
