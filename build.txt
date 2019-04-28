@@ -1,4 +1,4 @@
 author = catsounds, Mako-Z, scratchock, Noobas
 version = 0.1
-displayName = Fargo's Soul Mod++ DLC Funky Mode Meme Edition
+displayName = Fargo's Mod DLC 
 languageVersion = 6
