@@ -1,11 +1,12 @@
 using Terraria;
+using Terraria.ID; //perfect, would not even compile without this :echprime:
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 {
     public class MyGlobalItem : GlobalItem
     {
-        public override bool CanUseItem(Item item, Player player) //LULLLLLLLLLLLLL
+        public override bool CanUseItem(Item item, Player player)
         {
             MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
             if (modPlayer.CthulhusAura && item.healLife > 0)

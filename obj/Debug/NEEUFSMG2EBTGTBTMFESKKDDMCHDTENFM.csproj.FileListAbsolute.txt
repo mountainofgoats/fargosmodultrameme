@@ -1,0 +1,2 @@
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.csprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.csproj.CoreCompileInputs.cache
