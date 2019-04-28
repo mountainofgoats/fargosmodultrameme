@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Buffs\CthulhusAura.cs" />
     <Compile Include="Buffs\OceanicElixir.cs" />
     <Compile Include="Buffs\PlaceholderPet.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
@@ -45,12 +44,10 @@
     <Compile Include="Items\Placeholder.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
-    <Compile Include="Items\Weapons\FARGOYOYO.cs" />
     <Compile Include="MyPlayer.cs" />
     <Compile Include="MyWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
     <Compile Include="NPCs\MyGlobalNPC.cs" />
-    <Compile Include="Projectiles\FARGOYOYOPROJ.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>

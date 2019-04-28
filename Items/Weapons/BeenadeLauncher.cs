@@ -33,11 +33,10 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			//Todo: Add projectile removal from the Player Inventory;
-			for (int i = 0; i < Main.rand.Next(2,4); i++)
-			{
+				int AmountControl = player.FindItem(ItemID.Beenade);
+				player.inventory[AmountControl].stack -= 2;
+
 				Projectile.NewProjectile(player.position.X, player.position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
-			}
 
 			return true;
 		}

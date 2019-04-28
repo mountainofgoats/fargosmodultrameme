@@ -41,36 +41,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                         }
 						break;
 
-					case NPCID.EyeofCthulhu:
-						Counter++;
-						if (npc.life <= npc.lifeMax * 0.65f && !alreadyHealed)
-                        {
-                            npc.dontTakeDamage = true;
-                            Counter += 1f;
-                            if (Counter >= 120f)
-                            {
-                                int heal = npc.lifeMax - npc.life;
-                                npc.life += heal;
-                                npc.HealEffect(heal);
-                                Counter = 0f;
-                                alreadyHealed = true;
-                                npc.dontTakeDamage = false;
-                                EoCPhase2 = true;
-                            }
-                        }
-                        if (Counter2 >= 300f && EoCPhase2)
-                        {
-                            NPC.NewNPC((int)npc.Center.X, (int)npc.Center.Y, NPCID.ServantofCthulhu);
-                            Counter2 = 0f;
-                        }
-                        if (EoCPhase2)
-                        {
-                            player.AddBuff(mod.BuffType("CthulhusAura"), 2);
-                            npc.damage *= 2;
-                            Counter2 += 1f;
-                        }
-						break;
-
                     case NPCID.EaterofWorldsBody:
                         Counter++;
                         if (Counter >= 600f && Main.rand.Next(200) == 0) //very low chance to avoid spam
