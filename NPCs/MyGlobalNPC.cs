@@ -1,6 +1,9 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna;
+using Microsoft.Xna.Framework;
+using System;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 {
@@ -22,7 +25,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                 switch (npc.type)
                 {
                     case NPCID.KingSlime:
-                        Counter += 1f;
+						Counter++;
                         if (Counter >= 120f)
                         {
                             if (Main.rand.Next(2) == 0)
@@ -36,9 +39,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                             }
                             Counter = 0f;
                         }
-                        break;
-                    case NPCID.EyeofCthulhu:
-                        if (npc.life <= npc.lifeMax * 0.65f && !alreadyHealed)
+						break;
+
+					case NPCID.EyeofCthulhu:
+						Counter++;
+						if (npc.life <= npc.lifeMax * 0.65f && !alreadyHealed)
                         {
                             npc.dontTakeDamage = true;
                             Counter += 1f;
@@ -64,6 +69,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                             npc.damage *= 2;
                             Counter2 += 1f;
                         }
+						break;
+
                     case NPCID.EaterofWorldsBody:
                         Counter++;
                         if (Counter >= 600f && Main.rand.Next(200) == 0) //very low chance to avoid spam
