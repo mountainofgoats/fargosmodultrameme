@@ -1,2 +1,12 @@
 C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.csprojAssemblyReference.cache
 C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.pdb
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\bin\Debug\Terraria.exe
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.csproj.CopyComplete
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.dll
+C:\Users\Asus\Documents\GitHub\fargosmodultrameme\obj\Debug\NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.pdb

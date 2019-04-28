@@ -33,12 +33,18 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-				int AmountControl = player.FindItem(ItemID.Beenade);
+			int AmountControl = player.FindItem(ItemID.Beenade);
+
+			if (player.HasItem(ItemID.Beenade))
+			{
 				player.inventory[AmountControl].stack -= 2;
-
 				Projectile.NewProjectile(player.position.X, player.position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
-
-			return true;
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		public override Vector2? HoldoutOffset()
 		{
