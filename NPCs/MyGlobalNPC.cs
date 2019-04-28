@@ -4,20 +4,19 @@ using Terraria.ModLoader;
 using Microsoft.Xna;
 using Microsoft.Xna.Framework;
 using System;
+using System.Collections.Generic;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 {
-    public class MyGlobalNPC : GlobalNPC
+	public class MyGlobalNPC : GlobalNPC
     {
         float Counter;
         float Counter2;
-        int projectile;
+		int projectile;
         int[] positions = { 100, 200, 300, 0, -100, -200, -300 };
         public override bool InstancePerEntity => true;
-        bool alreadyHealed = false;
-        bool EoCPhase2 = false;
 
-        public override void AI(NPC npc)
+		public override void AI(NPC npc)
         {
             Player player = Main.player[npc.target];
             if (MyWorld.MasomodeEX)
@@ -114,18 +113,31 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
         public override void NPCLoot(NPC npc)
         {
             Player player = Main.player[Main.myPlayer];
-            switch (npc.type)
-            {
-                case NPCID.QueenBee:
-                    if (Main.rand.Next(10) == 0)
-                        Item.NewItem(npc.getRect(), mod.ItemType("BeenadeLauncher"));
-                    break;               
-            }
-            if (player.ZoneBeach && npc.lifeMax > 5 && !npc.friendly && Main.hardMode && NPC.downedGolemBoss)
-            {
-                if (Main.rand.Next(100) == 0)
-                    Item.NewItem(npc.getRect(), mod.ItemType("WaterEssence"));
-            }
+			if (MyWorld.MasomodeEX)
+			{
+				switch (npc.type)
+				{
+					case NPCID.QueenBee:
+						if (Main.rand.Next(10) == 0)
+							Item.NewItem(npc.getRect(), mod.ItemType("BeenadeLauncher"));
+						break;
+				}
+				if (player.ZoneBeach && npc.lifeMax > 5 && !npc.friendly && Main.hardMode && NPC.downedGolemBoss)
+				{
+					if (Main.rand.Next(100) == 0)
+						Item.NewItem(npc.getRect(), mod.ItemType("WaterEssence"));
+				}
+			}
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			return obj is MyGlobalNPC nPC &&
+				   Counter == nPC.Counter &&
+				   Counter2 == nPC.Counter2 &&
+				   projectile == nPC.projectile &&
+				   EqualityComparer<int[]>.Default.Equals(positions, nPC.positions) &&
+				   InstancePerEntity == nPC.InstancePerEntity;
+		}
+	}
 }

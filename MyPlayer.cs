@@ -7,13 +7,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
     public class MyPlayer : ModPlayer
     {
-        public bool CthulhusAura;
         public bool RottenFlesh;
         public bool PlaceholderPet;
 
         public override void ResetEffects()
         {
-            CthulhusAura = false;
             RottenFlesh = false;
             PlaceholderPet = false;
         }
