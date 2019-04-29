@@ -35,6 +35,8 @@
   <ItemGroup>
     <Compile Include="Buffs\OceanicElixir.cs" />
     <Compile Include="Buffs\PlaceholderPet.cs" />
+    <Compile Include="Items\BeeBullet.cs" />
+    <Compile Include="Items\HiveArrow.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
     <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
     <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
@@ -48,6 +50,8 @@
     <Compile Include="MyWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
     <Compile Include="NPCs\MyGlobalNPC.cs" />
+    <Compile Include="Projectiles\BeeBullet.cs" />
+    <Compile Include="Projectiles\HiveArrow.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +80,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Items\BeeBullet.png" />
+    <Content Include="Items\HiveArrow.png" />
     <Content Include="Items\Weapons\BeenadeLauncher.png" />
+    <Content Include="Projectiles\BeeBullet.png" />
+    <Content Include="Projectiles\HiveArrow.png" />
+    <Content Include="Projectiles\PlaceholderProjectile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
