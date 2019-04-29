@@ -35,6 +35,7 @@
   <ItemGroup>
     <Compile Include="Buffs\OceanicElixir.cs" />
     <Compile Include="Buffs\PlaceholderPet.cs" />
+    <Compile Include="Items\HiveArrowProjectile.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
     <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
     <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="MyWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
     <Compile Include="NPCs\MyGlobalNPC.cs" />
+    <Compile Include="Projectiles\HiveArrowProjectile.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>

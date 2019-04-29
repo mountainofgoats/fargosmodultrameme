@@ -3,8 +3,9 @@
     "",
     "\\Buffs",
     "\\Items",
-    "\\Items\\Weapons"
+    "\\Items\\Weapons",
+    "\\Projectiles"
   ],
-  "SelectedNode": "\\Items\\OceanicElixir.cs",
+  "SelectedNode": "\\Items\\HiveArrow.cs",
   "PreviewInSolutionExplorer": false
 }
