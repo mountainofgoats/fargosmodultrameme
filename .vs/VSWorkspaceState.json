@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Buffs",
-    "\\Items",
-    "\\Items\\Weapons"
+    "\\Projectiles"
   ],
-  "SelectedNode": "\\Items\\OceanicElixir.cs",
+  "SelectedNode": "\\Projectiles\\BeeBullet.cs",
   "PreviewInSolutionExplorer": false
 }
