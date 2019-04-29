@@ -7,27 +7,27 @@ using System;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 {
-	public class HiveArrow : ModProjectile
+	public class BeeBullet : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hive Arrow");
+			DisplayName.SetDefault("Bee Bullet");
 		}
 
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
-			projectile.width = 14;
-			projectile.height = 32;
+			projectile.CloneDefaults(ProjectileID.Bullet);
+			projectile.width = 6;
+			projectile.height = 8;
 			projectile.ignoreWater = true;
-			projectile.penetrate = 1;
+			projectile.penetrate = 3;
 			projectile.arrow = true;
 			projectile.melee = false;
 			projectile.friendly = true;
 			projectile.tileCollide = true;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) => NPC.NewNPC((int)projectile.position.X, (int)projectile.position.Y, NPCID.Bee, 4);
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) => NPC.NewNPC((int)projectile.position.X, (int)projectile.position.Y, NPCID.Bee);
 
 
 		public override void Kill(int timeLeft)
