@@ -68,7 +68,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 			else if (player.HasItem(x[5]))
 			{
 				Main.NewText("You have obtained the power of the Mind Stone.", 219, 231);
-			}
+			} //БЛЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯЯ
 		}
 
 		public override bool CanRightClick()
