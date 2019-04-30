@@ -222,10 +222,10 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 						break;
 				}
 			}
-			if (modPlayer.GougedFlesh)
-			{
-				//blah blah blah throw flesh
-			}
+			//if (modPlayer.GougedFlesh)
+			//{
+			//	//blah blah blah throw flesh|| imagine putting that even though it is not even coded in :begone:
+			//}
 		}
 
 		public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
