@@ -1,9 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 {
@@ -12,26 +9,24 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Infinity Gauntlet");
-			Tooltip.SetDefault("A gauntlet capable of wielding the power of the 6 infinity stones.");
+			Tooltip.SetDefault("A gauntlet capable of wielding the power of the 6 infinity stones."); 
+            Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
 		{
-			item.width = 48;
-			item.height = 100;
-			item.value = Int32.MaxValue;
-			item.rare = 13;
-			item.maxStack = 1;
-			item.ranged = false;
-			item.consumable = false;
-			item.expertOnly = true;
-			item.questItem = false;
-			item.thrown = false;
+            item.width = 50;
+            item.height = 50;
+            item.useTime = 20;
+            item.useAnimation = 20;
+            item.useStyle = 5;
+            item.UseSound = SoundID.Item123;
+            item.rare = -12;        
 		}
 
 		public override void HoldItem(Player player)
 		{
-			
+            DetectInfinityStones(player);
 		}
 
 		public virtual void DetectInfinityStones(Player player)
