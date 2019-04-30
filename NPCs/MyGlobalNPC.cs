@@ -97,15 +97,47 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
                 switch (npc.type)
                 {
                     case NPCID.EaterofWorldsHead:
-                    case NPCID.EaterofWorldsBody:
+						if (projectile.penetrate > 4 || projectile.penetrate == -1)
+						{
+							damage = 0;
+							crit = false;
+							knockback = 0f;
+						}
+						else if (projectile.penetrate <= 3)
+						{
+							damage /= 2;
+							crit = false;
+							knockback /= 2;
+						}
+						break;
+					case NPCID.EaterofWorldsBody:
+						if (projectile.penetrate > 4 || projectile.penetrate == -1)
+						{
+							damage = 0;
+							crit = false;
+							knockback = 0f;
+						}
+						else if (projectile.penetrate <= 3)
+						{
+							damage /= 2;
+							crit = false;
+							knockback /= 2;
+						}
+						break;
                     case NPCID.EaterofWorldsTail:
-                        if (projectile.penetrate > 1 || projectile.penetrate == -1)
+                        if (projectile.penetrate > 3 || projectile.penetrate == -1)
                         {
                             damage = 0;
                             crit = false;
                             knockback = 0f;
                         }
-                        break;
+						else if (projectile.penetrate <= 3)
+						{
+							damage /= 2;
+							crit = false;
+							knockback /= 2;
+						}
+						break;
                 }
             }
         }
@@ -129,15 +161,5 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 				}
 			}
         }
-
-		public override bool Equals(object obj)
-		{
-			return obj is MyGlobalNPC nPC &&
-				   Counter == nPC.Counter &&
-				   Counter2 == nPC.Counter2 &&
-				   projectile == nPC.projectile &&
-				   EqualityComparer<int[]>.Default.Equals(positions, nPC.positions) &&
-				   InstancePerEntity == nPC.InstancePerEntity;
-		}
 	}
 }

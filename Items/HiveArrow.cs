@@ -9,6 +9,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 {
 	public class HiveArrow : ModItem
 	{
+		public int craftindex;
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Hive arrow that releases bees on collision!");
@@ -30,6 +31,22 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 			item.shoot = mod.ProjectileType("HiveArrow");
 		}
 
+		public override void OnCraft(Recipe recipe)
+		{
+			craftindex++;
+		}
+
+		public virtual void SpawnBoss(Player player, ref int type)
+		{
+			if (Main.hardMode && craftindex == 250)
+			{
+				NPC.NewNPC((int)player.position.X, (int)player.position.Y, type, NPCID.KingSlime);
+			}
+			else
+			{
+				NPC.NewNPC((int)player.position.X, (int)player.position.Y, type, NPCID.SkeletronPrime);
+			}
+		}
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

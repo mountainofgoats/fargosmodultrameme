@@ -80,7 +80,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items\BeeBullet.png" />
     <Content Include="Items\HiveArrow.png" />
     <Content Include="Items\Weapons\BeenadeLauncher.png" />
     <Content Include="Projectiles\BeeBullet.png" />

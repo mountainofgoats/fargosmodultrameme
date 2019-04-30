@@ -1,9 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
+using Microsoft.Xna.Framework;
+using NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 {
@@ -21,18 +20,30 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			projectile.height = 32;
 			projectile.ignoreWater = true;
 			projectile.penetrate = 1;
+			projectile.aiStyle = 0;
 			projectile.arrow = true;
 			projectile.melee = false;
 			projectile.friendly = true;
 			projectile.tileCollide = true;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) => NPC.NewNPC((int)projectile.position.X, (int)projectile.position.Y, NPCID.Bee, 4);
-
+		public virtual bool OnTileCollide(Vector2 oldVelocity)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				Projectile.NewProjectile(projectile.oldPosition, projectile.oldVelocity, projectile.type, projectile.damage, projectile.knockBack, ProjectileID.Bee, Main.myPlayer);
+			}
+			return true;
+		}
 
 		public override void Kill(int timeLeft)
 		{
-			Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.t_Honey);
+			Player player = new Player();
+
+			for (int i = 0; i < 10; i++)
+			{
+				Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.t_Honey);
+			}
 			Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
 		}
 	}

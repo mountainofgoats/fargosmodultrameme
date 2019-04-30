@@ -27,8 +27,14 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			projectile.tileCollide = true;
 		}
 
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) => NPC.NewNPC((int)projectile.position.X, (int)projectile.position.Y, NPCID.Bee);
-
+		public virtual bool OnTileCollide(Vector2 oldVelocity)
+		{
+			for (int i =0; i < 5; i++)
+			{
+				Projectile.NewProjectile(projectile.oldPosition, projectile.oldVelocity, projectile.type, projectile.damage, projectile.knockBack, ProjectileID.Bee, Main.myPlayer);
+			}
+			return true;
+		}
 
 		public override void Kill(int timeLeft)
 		{
