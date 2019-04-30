@@ -44,6 +44,13 @@
     <Compile Include="Items\MyGlobalItem.cs" />
     <Compile Include="Items\OceanicElixir.cs" />
     <Compile Include="Items\Placeholder.cs" />
+    <Compile Include="Items\SpecialWeapons\MindStone.cs" />
+    <Compile Include="Items\SpecialWeapons\SpaceStone.cs" />
+    <Compile Include="Items\SpecialWeapons\RealityStone.cs" />
+    <Compile Include="Items\SpecialWeapons\TimeStone.cs" />
+    <Compile Include="Items\SpecialWeapons\SoulStone.cs" />
+    <Compile Include="Items\SpecialWeapons\PowerStone.cs" />
+    <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
     <Compile Include="MyPlayer.cs" />
@@ -81,6 +88,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Items\HiveArrow.png" />
+    <Content Include="Items\SpecialWeapons\InfinityGauntlet.png" />
+    <Content Include="Items\SpecialWeapons\MindStone.png" />
+    <Content Include="Items\SpecialWeapons\PowerStone.png" />
+    <Content Include="Items\SpecialWeapons\RealityStone.png" />
+    <Content Include="Items\SpecialWeapons\SoulStone.png" />
+    <Content Include="Items\SpecialWeapons\SpaceStone.png" />
+    <Content Include="Items\SpecialWeapons\TimeStone.png" />
     <Content Include="Items\Weapons\BeenadeLauncher.png" />
     <Content Include="Projectiles\BeeBullet.png" />
     <Content Include="Projectiles\HiveArrow.png" />
