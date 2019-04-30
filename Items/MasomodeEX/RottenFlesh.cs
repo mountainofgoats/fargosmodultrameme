@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -13,7 +13,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Rotten Flesh");
-            Tooltip.SetDefault("Immunity to Withered Armor and Withered Weapon\n10% increased damage at night or in corruption\nAll attacks inflict cursed flames");
+            Tooltip.SetDefault("Immunity to Withered Armor and Withered Weapon\nAll attacks inflict Cursed Inferno");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -40,14 +40,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
             MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
             player.buffImmune[BuffID.WitheredArmor] = true;
             player.buffImmune[BuffID.WitheredWeapon] = true;
-            if (!Main.dayTime || player.ZoneCorrupt)
-            {
-                player.meleeDamage += 0.10f;
-                player.rangedDamage += 0.10f;
-                player.magicDamage += 0.10f;
-                player.minionDamage += 0.10f;
-                player.thrownDamage += 0.10f;
-            }
             modPlayer.RottenFlesh = true;
         }
     }

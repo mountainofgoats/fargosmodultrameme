@@ -13,7 +13,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Slimy Shield");
-            Tooltip.SetDefault("Immunity to Oozed\nImmunity to knockback");
+            Tooltip.SetDefault("Immunity to Oozed");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -39,7 +39,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.buffImmune[BuffID.OgreSpit] = true;
-            player.noKnockback = true;
         }
     }
 }

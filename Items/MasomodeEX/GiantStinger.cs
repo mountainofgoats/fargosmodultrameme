@@ -6,14 +6,14 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
-    public class CoreofEvil : ModItem
+    public class GiantStinger : ModItem
     {
         public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Core of Evil");
-            Tooltip.SetDefault("Immunity to Obstructed");
+            DisplayName.SetDefault("Giant Stinger");
+            Tooltip.SetDefault("Immunity to Poisoned\nAll attacks inflict poisoned");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -37,7 +37,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.buffImmune[BuffID.Obstructed] = true;
+            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            player.buffImmune[BuffID.Poisoned] = true;
+            modPlayer.GiantStinger = true;
         }
     }
 }

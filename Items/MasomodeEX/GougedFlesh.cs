@@ -6,14 +6,14 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
-    public class CoreofEvil : ModItem
+    public class GougedFlesh : ModItem
     {
         public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Core of Evil");
-            Tooltip.SetDefault("Immunity to Obstructed");
+            DisplayName.SetDefault("Gouged Flesh");
+            Tooltip.SetDefault("Immunity to Cursed Inferno and Ichor\nAll attacks inflict Cursed Inferno and Ichor");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -37,7 +37,10 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.buffImmune[BuffID.Obstructed] = true;
+            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            player.buffImmune[BuffID.CursedInferno] = true;
+            player.buffImmune[BuffID.Ichor] = true;
+            modPlayer.GougedFlesh = true;
         }
     }
 }

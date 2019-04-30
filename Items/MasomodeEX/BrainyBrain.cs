@@ -6,14 +6,14 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
-    public class CoreofEvil : ModItem
+    public class BrainyBrain : ModItem
     {
         public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Core of Evil");
-            Tooltip.SetDefault("Immunity to Obstructed");
+            DisplayName.SetDefault("Brainy Brain");
+            Tooltip.SetDefault("Immunity to Ichor\nAll attacks inflict Ichor");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -37,7 +37,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.buffImmune[BuffID.Obstructed] = true;
+            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            player.buffImmune[BuffID.Ichor] = true;
+            modPlayer.BrainyBrain = true;
         }
     }
 }
