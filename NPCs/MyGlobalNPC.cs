@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
-{
+{//all credit goes to Noobas
 	public class MyGlobalNPC : GlobalNPC
 	{
 		//Slime Boss
