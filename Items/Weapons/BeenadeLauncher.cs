@@ -30,27 +30,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
             item.autoReuse = true;
             item.noMelee = true;
         }
-
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			int AmountControl = player.FindItem(ItemID.Beenade);
-
-			player.inventory[AmountControl].stack -= 2;
-
-			Projectile.NewProjectile(player.position.X, player.position.Y, speedX, speedY, type, damage, knockBack, Main.myPlayer);
-
-			return true;
-		}
-
-		public override bool CanUseItem(Player player)
-		{
-			return player.HasItem(ItemID.Beenade);
-		}
-
-		public override Vector2? HoldoutOffset()
-		{
-			return new Vector2(-10, 0);
-		}
+	
+	public override Vector2? HoldoutOffset()
+	{
+	    return new Vector2(-10, 0);
+	}
     }
 }
  
