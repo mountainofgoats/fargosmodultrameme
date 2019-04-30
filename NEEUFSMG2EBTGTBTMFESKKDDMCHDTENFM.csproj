@@ -35,8 +35,8 @@
   <ItemGroup>
     <Compile Include="Buffs\OceanicElixir.cs" />
     <Compile Include="Buffs\PlaceholderPet.cs" />
-    <Compile Include="Items\BeeBullet.cs" />
-    <Compile Include="Items\HiveArrow.cs" />
+    <Compile Include="Items\Ammo\BeeBullet.cs" />
+    <Compile Include="Items\Ammo\HiveArrow.cs" />
     <Compile Include="Items\MasomodeEX\BoneShield.cs" />
     <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
@@ -45,6 +45,7 @@
     <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
     <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
     <Compile Include="Items\MasomodeEX\SlimyShield.cs" />
+    <Compile Include="Items\ModName.cs" />
     <Compile Include="Items\MyGlobalItem.cs" />
     <Compile Include="Items\OceanicElixir.cs" />
     <Compile Include="Items\Placeholder.cs" />
@@ -84,11 +85,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items\HiveArrow.png" />
     <Content Include="Items\SpecialWeapons\InfinityGauntlet.png" />
     <Content Include="Items\SpecialWeapons\MindStone.png" />
     <Content Include="Items\SpecialWeapons\PowerStone.png" />
@@ -101,6 +101,7 @@
     <Content Include="Projectiles\HiveArrow.png" />
     <Content Include="Projectiles\PlaceholderProjectile.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>

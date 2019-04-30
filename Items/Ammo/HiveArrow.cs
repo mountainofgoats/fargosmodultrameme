@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
+namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Ammo
 {
 	public class HiveArrow : ModItem
 	{

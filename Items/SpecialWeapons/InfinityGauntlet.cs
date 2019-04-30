@@ -18,7 +18,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 		{
 			item.width = 48;
 			item.height = 100;
-			item.value = Int32.MaxValue;
+			//item.value = Int32.MaxValue;
 			item.rare = 13;
 			item.maxStack = 1;
 			item.useStyle = 5;
