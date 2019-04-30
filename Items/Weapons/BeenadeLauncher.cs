@@ -28,7 +28,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
             item.shoot = ProjectileID.Beenade;
             item.shootSpeed = 10f;
             item.autoReuse = true;
-            item.noMelee = true;
+            item.noMelee = true; //beenade launcher too lame with only 1 nade launch :begone:
         }
 	
 	public override Vector2? HoldoutOffset()
