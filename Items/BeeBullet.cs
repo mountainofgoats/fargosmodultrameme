@@ -20,7 +20,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 			item.rare = 2;
 			item.value = 100;
 			item.knockBack = 2f;
-			item.shootSpeed = 2f;
+			item.shootSpeed = 6f;
 			item.maxStack = 999;
 			item.width = 6;
 			item.height = 8;

@@ -21,7 +21,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 			item.rare = 3;
 			item.value = 100;
 			item.knockBack = 2f;
-			item.shootSpeed = 2f;
+			item.shootSpeed = 5f;
 			item.maxStack = 999;
 			item.width = 14;
 			item.height = 32;
@@ -47,6 +47,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 				NPC.NewNPC((int)player.position.X, (int)player.position.Y, type, NPCID.SkeletronPrime);
 			}
 		}
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);

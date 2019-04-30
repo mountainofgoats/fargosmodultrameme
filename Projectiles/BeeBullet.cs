@@ -25,21 +25,13 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			projectile.friendly = true;
 			projectile.tileCollide = true;
 		}
-
-		public virtual bool OnTileCollide(Vector2 oldVelocity)
-		{
-			Projectile.NewProjectile(projectile.oldPosition, projectile.oldVelocity, projectile.type, projectile.damage, projectile.knockBack, ProjectileID.Bee, Main.myPlayer);
-			return true;
-		}
-
 		public override void Kill(int timeLeft)
 		{
-			Player player = new Player();
-
 			for (int i = 0; i < 10; i++)
 			{
 				Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.t_Honey);
 			}
+
 			Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
 		}
 	}
