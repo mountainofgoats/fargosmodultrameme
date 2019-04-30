@@ -29,10 +29,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 
 		public virtual bool OnTileCollide(Vector2 oldVelocity)
 		{
-			for (int i =0; i < 5; i++)
-			{
-				Projectile.NewProjectile(projectile.oldPosition, projectile.oldVelocity, projectile.type, projectile.damage, projectile.knockBack, ProjectileID.Bee, Main.myPlayer);
-			}
+			Projectile.NewProjectile(projectile.oldPosition, projectile.oldVelocity, projectile.type, projectile.damage, projectile.knockBack, ProjectileID.Bee, Main.myPlayer);
 			return true;
 		}
 
