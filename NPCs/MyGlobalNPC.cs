@@ -69,7 +69,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 							Counter2 += 1f;
 						break;
 					case NPCID.EaterofWorldsBody:
-						Counter++;
+						Counter += 1f;
 						if (Counter >= 600f && Main.rand.Next(200) == 0) //very low chance to avoid spam
 						{
 							Vector2 velocity = player.Center - npc.Center;
@@ -82,7 +82,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 							Main.projectile[projectile].tileCollide = false;
 							Counter = 0f;
 						}
-						Counter2++;
+						Counter2 += 1f;
 						if (Counter2 >= 300f && Main.rand.Next(2000) == 0) //very low chance to avoid spam
 						{
 							NPC.NewNPC((int)npc.Center.X, (int)npc.Center.Y, NPCID.EaterofSouls);
