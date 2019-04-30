@@ -10,17 +10,16 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hive Arrow");
+			DisplayName.SetDefault("Bee Bullet");
 		}
 
 		public override void SetDefaults()
 		{
-			projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
+			projectile.CloneDefaults(ProjectileID.Bullet);
 			projectile.width = 14;
 			projectile.height = 32;
 			projectile.ignoreWater = true;
-			projectile.penetrate = 1;
-			projectile.aiStyle = 1;
+			projectile.penetrate = 2;
 			projectile.arrow = true;
 			projectile.melee = false;
 			projectile.friendly = true;
