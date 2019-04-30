@@ -1,16 +1,12 @@
+﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID; //perfect, would not even compile without this :echprime:
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 {
     public class MyGlobalItem : GlobalItem
     {
-        //public override bool CanUseItem(Item item, Player player)
-        //{
-        //    MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
-        //}
-        
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
             if (MyWorld.MasomodeEX)
@@ -25,6 +21,18 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
                         break;
                     case ItemID.EaterOfWorldsBossBag:
                         player.QuickSpawnItem(mod.ItemType("RottenFlesh"));
+                        break;
+                    case ItemID.BrainOfCthulhuBossBag:
+                        player.QuickSpawnItem(mod.ItemType("BrainyBrain"));
+                        break;
+                    case ItemID.QueenBeeBossBag:
+                        player.QuickSpawnItem(mod.ItemType("GiantStinger"));
+                        break;
+                    case ItemID.SkeletronBossBag:
+                        player.QuickSpawnItem(mod.ItemType("BoneShield"));
+                        break;
+                    case ItemID.WallOfFleshBossBag:
+                        player.QuickSpawnItem(mod.ItemType("GougedFlesh"));
                         break;
                 }
             }

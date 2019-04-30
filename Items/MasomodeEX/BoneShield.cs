@@ -6,14 +6,14 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
-    public class CoreofEvil : ModItem
+    public class BoneShield : ModItem
     {
         public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Core of Evil");
-            Tooltip.SetDefault("Immunity to Obstructed");
+            DisplayName.SetDefault("Bone Shield");
+            Tooltip.SetDefault("Immunity to Cursed");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -32,12 +32,13 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
             item.width = 50;
             item.height = 50;
             item.rare = 1;
+            item.defense = 5;
             item.accessory = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.buffImmune[BuffID.Obstructed] = true;
+            player.buffImmune[BuffID.Cursed] = true;
         }
     }
 }
