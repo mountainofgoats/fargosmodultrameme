@@ -15,70 +15,55 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 
 		public override void SetDefaults()
 		{
-            item.width = 50;
-            item.height = 50;
+			item.width = 48;
+			item.height = 100;
+			item.value = Int32.MaxValue;
+			item.rare = 13;
+			item.maxStack = 1;
+			item.useStyle = 5;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = 5;
             item.UseSound = SoundID.Item123;
-            item.rare = -12;        
+			item.ranged = false;
+			item.consumable = false;
+			item.expertOnly = true;
+			item.questItem = false;
+			item.thrown = false;
 		}
 
-		public override void HoldItem(Player player)
+		public override void RightClick(Player player)
 		{
-            DetectInfinityStones(player);
+			int infg = player.FindItem(mod.ItemType("InfinityGauntlet"));
+			int powerS = player.FindItem(mod.ItemType("PowerStone"));
+			int soulS = player.FindItem(mod.ItemType("SoulStone"));
+			int spaceS = player.FindItem(mod.ItemType("SpaceStone"));
+			int timeS = player.FindItem(mod.ItemType("TimeStone"));
+			int realityS = player.FindItem(mod.ItemType("RealityStone"));
+			int mindS = player.FindItem(mod.ItemType("MindStone"));
 		}
 
-		public virtual void DetectInfinityStones(Player player)
+		public override bool CanRightClick()
 		{
-			int indexerpS = 0;
-			int indexersS = 0;
-			int indexerspS = 0;
-			int indexertS = 0;
-			int indexerrS = 0;
-			int indexermS = 0;
+			Player player = new Player();
 
-			int pS = player.FindItem(mod.ItemType("PowerStone"));
-			int sS = player.FindItem(mod.ItemType("SoulStone"));
-			int spS = player.FindItem(mod.ItemType("SpaceStone"));
-			int tS = player.FindItem(mod.ItemType("TimeStone"));
-			int rS = player.FindItem(mod.ItemType("RealityStone"));
-			int mS = player.FindItem(mod.ItemType("MindStone"));
+			int infg = player.FindItem(mod.ItemType("InfinityGauntlet"));
+			int powerS = player.FindItem(mod.ItemType("PowerStone"));
+			int soulS = player.FindItem(mod.ItemType("SoulStone"));
+			int spaceS = player.FindItem(mod.ItemType("SpaceStone"));
+			int timeS = player.FindItem(mod.ItemType("TimeStone"));
+			int realityS = player.FindItem(mod.ItemType("RealityStone"));
+			int mindS = player.FindItem(mod.ItemType("MindStone"));
 
-			if (player.HasItem(pS))
+			int[] x = new int[] { powerS, soulS, spaceS, timeS, realityS, mindS};
+
+			for (int i = 0; i < 6; i++)
 			{
-				Main.NewText("You have gained the power of the Power Stone.", 172, 19);
-				indexerpS++;
+				if (player.HasItem(infg) && player.HasItem(x[i]))
+				{
+					return true;
+				}
 			}
-			if (player.HasItem(sS))
-			{
-				Main.NewText("You have obtained the power of the Soul Stone.", 232, 129);
-				indexersS++;
-			}
-			if (player.HasItem(spS))
-			{
-				Main.NewText("You have obtained the power of the Space Stone.", 25, 86);
-				indexerspS++;
-			}
-			if (player.HasItem(tS))
-			{
-				Main.NewText("You have ontained the power of the Time Stone.", 42, 172);
-				indexertS++;
-			}
-			if (player.HasItem(rS))
-			{
-				Main.NewText("You have ontained the power of the Reality Stone.", 184, 30);
-				indexerrS++;
-			}
-			if (player.HasItem(mS))
-			{
-				Main.NewText("You have obtained the power of the Mind Stone.", 219, 231);
-				indexermS++;
-			}
-			if (indexermS == 1 && indexersS == 1 && indexertS == 1 && indexerspS == 1 && indexerrS == 1 && indexerpS == 1)
-			{
-				Main.NewText("You have gained the power of all the Infinity Stones.");
-			}
+			return false;
 		}
 	}
 }
