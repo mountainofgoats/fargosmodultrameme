@@ -84,7 +84,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
