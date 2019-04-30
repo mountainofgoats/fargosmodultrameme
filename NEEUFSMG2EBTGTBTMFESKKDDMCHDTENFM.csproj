@@ -37,7 +37,11 @@
     <Compile Include="Buffs\PlaceholderPet.cs" />
     <Compile Include="Items\BeeBullet.cs" />
     <Compile Include="Items\HiveArrow.cs" />
+    <Compile Include="Items\MasomodeEX\BoneShield.cs" />
+    <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
+    <Compile Include="Items\MasomodeEX\GiantStinger.cs" />
+    <Compile Include="Items\MasomodeEX\GougedFlesh.cs" />
     <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
     <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
     <Compile Include="Items\MasomodeEX\SlimyShield.cs" />
