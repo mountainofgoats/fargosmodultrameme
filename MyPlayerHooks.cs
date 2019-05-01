@@ -1,9 +1,4 @@
-using System.Collections.Generic;
 using Terraria.GameInput;
-using System.Linq;
-using Terraria.ID;
-using Terraria;
-using Microsoft.Xna.Framework;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {

@@ -62,7 +62,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             items.Add(item2);
         }
 
-		public static MyPlayer ModPlayer(Player player)
+		public static MyPlayer DLCPlayer(Player player)
 		{
 			return player.GetModPlayer<MyPlayer>();
 		}
