@@ -89,13 +89,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items\SpecialWeapons\InfinityGauntlet.png" />
-    <Content Include="Items\SpecialWeapons\MindStone.png" />
-    <Content Include="Items\SpecialWeapons\PowerStone.png" />
-    <Content Include="Items\SpecialWeapons\RealityStone.png" />
-    <Content Include="Items\SpecialWeapons\SoulStone.png" />
-    <Content Include="Items\SpecialWeapons\SpaceStone.png" />
-    <Content Include="Items\SpecialWeapons\TimeStone.png" />
     <Content Include="Items\Weapons\BeenadeLauncher.png" />
     <Content Include="Projectiles\BeeBullet.png" />
     <Content Include="Projectiles\HiveArrow.png" />

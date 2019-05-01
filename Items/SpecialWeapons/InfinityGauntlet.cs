@@ -19,23 +19,16 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 			item.width = 48;
 			item.height = 100;
 			//item.value = Int32.MaxValue;
-			item.rare = 13;
+			item.rare = 11;
 			item.maxStack = 1;
 			item.useStyle = 5;
             item.useTime = 20;
             item.useAnimation = 20;
             item.UseSound = SoundID.Item123;
-			item.ranged = false;
-			item.consumable = false;
-			item.expertOnly = true;
-			item.questItem = false;
-			item.thrown = false;
 		}
 
 		public override void RightClick(Player player)
 		{
-			item.stack++;
-
 			int powerS = player.FindItem(mod.ItemType("PowerStone"));
 			int soulS = player.FindItem(mod.ItemType("SoulStone"));
 			int spaceS = player.FindItem(mod.ItemType("SpaceStone"));
@@ -73,7 +66,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 
 		public override bool CanRightClick()
 		{
-			Player player = new Player();
+			Player player = Main.player[Main.myPlayer];
 
 			int powerS = player.FindItem(mod.ItemType("PowerStone"));
 			int soulS = player.FindItem(mod.ItemType("SoulStone"));
@@ -88,23 +81,23 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 			{
 				return true;
 			}
-			else if (player.HasItem(x[1]) && player.HasItem(mod.ItemType("InfinityGauntlet")))
+			else if (player.HasItem(x[1]))
 			{
 				return true;
 			}
-			else if (player.HasItem(x[2]) && player.HasItem(mod.ItemType("InfinityGauntlet")))
+			else if (player.HasItem(x[2]))
 			{
 				return true;
 			}
-			else if (player.HasItem(x[3]) && player.HasItem(mod.ItemType("InfinityGauntlet")))
+			else if (player.HasItem(x[3]))
 			{
 				return true;
 			}
-			else if (player.HasItem(x[4]) && player.HasItem(mod.ItemType("InfinityGauntlet")))
+			else if (player.HasItem(x[4]))
 			{
 				return true;
 			}
-			else if (player.HasItem(x[5]) && player.HasItem(mod.ItemType("InfinityGauntlet")))
+			else if (player.HasItem(x[5]))
 			{
 				return true;
 			}

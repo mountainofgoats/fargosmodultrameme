@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using System;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 {
@@ -11,14 +9,31 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Reality Stone");
+			DisplayName.SetDefault("Reality Stone");
 			Tooltip.SetDefault("One of the 6 Infinity Stones, capable of manipulating the reality.");
 		}
+        public override void ModifyTooltips(List<TooltipLine> list)
+        {
+            foreach (TooltipLine tooltipLine in list)
+            {
+                if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
+                {
+                    tooltipLine.overrideColor = new Color?(new Color(186, 33, 69));
+                }
+            }
+        }
 
-		public override void SetDefaults()
-		{
+        public override void SetDefaults()
+        {
+            item.width = 50;
+            item.height = 50;
+            item.accessory = true;
+        }
 
-		}
-	}
+        public override void UpdateAccessory(Player player, bool hideVisual)
+        {
+            //Soon Tm
+        }
+    }
 }
 
