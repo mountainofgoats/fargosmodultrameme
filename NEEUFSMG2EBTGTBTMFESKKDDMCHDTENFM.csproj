@@ -58,6 +58,7 @@
     <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
+    <Compile Include="MyPlayerHooks.cs" />
     <Compile Include="MyPlayer.cs" />
     <Compile Include="MyWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
@@ -85,7 +86,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

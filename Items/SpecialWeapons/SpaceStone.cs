@@ -25,14 +25,14 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 
         public override void SetDefaults()
         {
-            item.width = 50;
-            item.height = 50;
+            item.width = 30;
+            item.height = 30;
             item.accessory = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            //Soon Tm
-        }
+			MyPlayer.ModPlayer(player).stoneAbilityb = true;
+		}
     }
 }

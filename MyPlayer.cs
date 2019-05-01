@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
-    public class MyPlayer : ModPlayer
+    public partial class MyPlayer : ModPlayer
     {
         //Masomode EX items
         public bool RottenFlesh;
@@ -61,5 +61,14 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             item2.SetDefaults(mod.ItemType("MasochistEX"));
             items.Add(item2);
         }
+
+		public static MyPlayer ModPlayer(Player player)
+		{
+			return player.GetModPlayer<MyPlayer>();
+		}
+
+		public static ModHotKey stoneAbility;
+
+		public bool stoneAbilityb;
     }
 }

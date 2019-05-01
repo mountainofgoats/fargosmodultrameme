@@ -7,5 +7,10 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 		public NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM()
 		{
 		}
+
+		public override void Load()
+		{
+			MyPlayer.stoneAbility = RegisterHotKey("Infinity Stone Ability", "P");
+		}
 	}
 }
