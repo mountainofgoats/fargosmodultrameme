@@ -17,7 +17,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 			{
 				if (stoneAbilityb)
 				{
-					Projectile.NewProjectile();
+
 				}
 			}
 		}
