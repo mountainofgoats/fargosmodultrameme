@@ -3,11 +3,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using FargowiltasSouls;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
+namespace FargowiltasDLC.Items.MasomodeEX
 {
     public class MasochistEX : ModItem
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+        public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {

@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
+namespace FargowiltasDLC.Projectiles
 {
 	public class DLCGlobalProjectile : GlobalProjectile
 	{

@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
+namespace FargowiltasDLC
 {
 	public class FargowiltasDLC : Mod
 	{

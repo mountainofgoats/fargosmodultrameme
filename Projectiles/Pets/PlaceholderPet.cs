@@ -2,11 +2,11 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles.Pets
+namespace FargowiltasDLC.Projectiles.Pets
 {
     public class PlaceholderPet : ModProjectile
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Projectiles/PlaceholderProjectile";
+        public override string Texture => "FargowiltasDLC/Projectiles/PlaceholderProjectile";
 
         public override void SetStaticDefaults()
         {

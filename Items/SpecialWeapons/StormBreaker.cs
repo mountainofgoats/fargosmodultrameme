@@ -4,13 +4,13 @@ using Terraria.ModLoader;
 using System;
 using Microsoft.Xna.Framework;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.SpecialWeapons
 {
 
 	public class StormBreaker : ModItem
 	{
 
-		public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+		public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
 		public override void SetDefaults()
 		{

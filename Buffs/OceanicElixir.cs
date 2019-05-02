@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Buffs
+namespace FargowiltasDLC.Buffs
 {
     public class OceanicElixir : ModBuff
     {
@@ -21,7 +21,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Buffs
 
         public override bool Autoload(ref string name, ref string texture)
         {
-            texture = "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Buffs/PlaceholderBuff";
+            texture = "FargowiltasDLC/Buffs/PlaceholderBuff";
             return true;
         }
     }

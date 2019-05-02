@@ -1,10 +1,10 @@
 ﻿using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
+namespace FargowiltasDLC.Items
 {
     public class WaterEssence : ModItem
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+        public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {

@@ -2,11 +2,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
+namespace FargowiltasDLC.Items
 {
     public class Placeholder : ModItem
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+        public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
