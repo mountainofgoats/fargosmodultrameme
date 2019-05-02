@@ -79,7 +79,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
-			if (stoneAbility.JustPressed)
+			if (FargowiltasDLC.stoneAbility.JustPressed)
 			{
 				if (stoneAbilityb)
 				{
