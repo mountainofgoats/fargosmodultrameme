@@ -8,6 +8,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 {
 	public class StormBreakerDirectProjectile : ModProjectile
 	{
+
+		public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Direct lightning released by the Stormbreaker");
@@ -28,8 +31,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 
 		public float distance
 		{
-			get => projectile.ai[0];
-			set => projectile.ai[0] = value;
+			get { return projectile.ai[0]; }
+			set { projectile.ai[0] = value; }
 		}
 
 		public override void AI()
