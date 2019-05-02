@@ -1,7 +1,7 @@
 using Terraria.ModLoader.IO;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
+namespace FargowiltasDLC
 {
     public class DLCWorld : ModWorld
     {

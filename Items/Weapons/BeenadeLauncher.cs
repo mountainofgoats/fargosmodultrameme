@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.Weapons
+namespace FargowiltasDLC.Items.Weapons
 {
     public class BeenadeLauncher : ModItem
     {

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
+namespace FargowiltasDLC.NPCs
 {
 	public class DLCGlobalNPC : GlobalNPC
 	{

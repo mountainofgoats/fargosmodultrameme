@@ -1,14 +1,14 @@
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
+namespace FargowiltasDLC.Items
 { 
-    public class NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM : ModItem
+    public class FargowiltasDLC : ModItem
     {
-        public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+        public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM");
+            DisplayName.SetDefault("FargowiltasDLC");
             Tooltip.SetDefault(
                                 @"Konami's Best: New Extra Epic Ultimate Fargo's Soul Mod++ 
                                 Dancing All Night Golden 2: Electric Boogaloo

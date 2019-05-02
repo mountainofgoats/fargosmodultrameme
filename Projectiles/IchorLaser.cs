@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
+namespace FargowiltasDLC.Projectiles
 {
     public class IchorLaser : ModProjectile
     {

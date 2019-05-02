@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.SpecialWeapons
 {
 	public class SoulStone : ModItem
 	{

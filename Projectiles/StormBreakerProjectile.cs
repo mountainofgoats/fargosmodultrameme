@@ -2,11 +2,11 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
+namespace FargowiltasDLC.Projectiles
 {
 	public class StormBreakerProjectile : ModProjectile
 	{
-		public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+		public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
 		public override void SetStaticDefaults()
 		{

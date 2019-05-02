@@ -1,7 +1,7 @@
 ﻿using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
+namespace FargowiltasDLC.Items
 {
     public class OceanicElixir : ModItem
     {

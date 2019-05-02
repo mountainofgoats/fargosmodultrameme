@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
 
-namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
+namespace FargowiltasDLC.Projectiles
 {
 	public class MindStoneBeam : ModProjectile
 	{
