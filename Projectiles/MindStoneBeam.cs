@@ -158,5 +158,17 @@ namespace FargowiltasDLC.Projectiles
 			Utils.PlotTileLine(projectile.Center, projectile.Center + projectile.velocity * (Distance - MoveDistance), 26,
 				DelegateMethods.CastLight);
 		}
+
+		public override bool ShouldUpdatePosition()
+		{
+			return false;
+		}
+
+		public override void CutTiles()
+		{
+			DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
+			Vector2 unit = projectile.velocity;
+			Utils.PlotTileLine(projectile.Center, projectile.Center + unit * Distance, (projectile.width + 16) * projectile.scale, DelegateMethods.CutTiles);
+		}
 	}
 }
