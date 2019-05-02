@@ -2,9 +2,9 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
-	public class NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM : Mod
+	public class FargowiltasDLC : Mod
 	{
-		public NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM()
+		public FargowiltasDLC()
 		{
 		}
 

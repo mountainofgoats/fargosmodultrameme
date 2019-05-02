@@ -1,4 +1,5 @@
-author = catsounds, Mako-Z, scratchock, Noobas
+author = Catsounds, Mako-Z, Noobas, PhoenicianTheWanderer
 version = 0.1
 displayName = Fargo's Mod DLC 
 languageVersion = 6
+weakReferences = Fargowiltas@1.3 FargowiltasSouls@0.6.1
