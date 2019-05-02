@@ -66,6 +66,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			#endregion
 		}
 
+		#region Colliding
 		public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
 		{
 			Player player = Main.player[projectile.owner];
@@ -76,6 +77,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			return Collision.CheckAABBvLineCollision(targetHitbox.TopLeft(), targetHitbox.Size(), player.Center,
 				player.Center + unit * Distance, 22, ref point);
 		}
+		#endregion
 
 		public override void AI()
 		{

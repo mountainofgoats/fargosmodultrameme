@@ -10,20 +10,20 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
     public partial class DLCPlayer : ModPlayer
     {
-        //Masomode EX items
-        public bool RottenFlesh;
+		#region MasomodeEX Items
+		public bool RottenFlesh;
         public bool BrainyBrain;
         public bool GiantStinger;
         public bool GougedFlesh;
 		public bool stoneAbilityb; //fires a beam
 		public bool stoneSpecialAbilityb; //performs it's special ability; revert time; space manipulation; etc.
-		//Other
-		public bool PlaceholderPet;
-		//Hotkeys
-		public static ModHotKey stoneAbility;
-		public static ModHotKey stoneSpecialAbility;
+		#endregion
 
-        public override void ResetEffects()
+		#region other variables
+		public bool PlaceholderPet;
+		#endregion
+
+		public override void ResetEffects()
         {
             //Masomode EX items
             RottenFlesh = false;
@@ -83,7 +83,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 			{
 				if (stoneAbilityb)
 				{
-					Projectile.NewProjectile(player.Center, Vector2.Zero, mod.ProjectileType("MindStoneBeam"), 112, 6f, Main.myPlayer);
+					Projectile.NewProjectile(player.Center, Vector2.Zero, 1, 112, 6f, mod.ProjectileType("MindStoneBeam"), Main.myPlayer);
 				}
 			}
 		}
