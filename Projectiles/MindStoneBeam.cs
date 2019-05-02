@@ -18,6 +18,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 		{
 			projectile.width = 10;
 			projectile.height = 10;
+			projectile.damage = 112;
+			projectile.knockBack = 6f;
+			projectile.type = 1;
 			projectile.friendly = true;
 			projectile.penetrate = -1;
 			projectile.tileCollide = false;
@@ -72,6 +75,12 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			// It will look for collisions on the given line using AABB
 			return Collision.CheckAABBvLineCollision(targetHitbox.TopLeft(), targetHitbox.Size(), player.Center,
 				player.Center + unit * Distance, 22, ref point);
+		}
+
+		public override void AI()
+		{
+			Vector2 mousePos = Main.MouseWorld;
+			Player player = Main.player[projectile.owner];
 		}
 	}
 }

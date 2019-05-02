@@ -91,8 +91,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 			{
 				if (stoneSpecialAbilityb)
 				{
-					Projectile projectile = new Projectile();
-					Projectile.NewProjectile(player.Center, projectile.velocity, projectile.type, projectile.damage, projectile.knockBack, mod.ProjectileType("MindStoneBeam"));
+					Projectile.NewProjectile(player.Center, Vector2.Zero, mod.ProjectileType("MindStoneBeam"), 112, 6f, Main.myPlayer);
 				}
 			}
 		}
