@@ -12,8 +12,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
         public bool BrainyBrain;
         public bool GiantStinger;
         public bool GougedFlesh;
-        //Other
-        public bool PlaceholderPet;
+		public bool stoneAbilityb;
+		//Other
+		public bool PlaceholderPet;
+		//Hotkeys
+		public static ModHotKey stoneAbility;
 
         public override void ResetEffects()
         {
@@ -22,11 +25,17 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             BrainyBrain = false;
             GiantStinger = false;
             GougedFlesh = false;
+			stoneAbilityb = false;
             //Other
             PlaceholderPet = false;
         }
-        
-        public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
+
+		public static DLCPlayer ModPlayer(Player player)
+		{
+			return player.GetModPlayer<DLCPlayer>();
+		}
+
+		public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
         {
             if (RottenFlesh)
                 target.AddBuff(BuffID.CursedInferno, Main.rand.Next(180, 240));
@@ -61,14 +70,5 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             item2.SetDefaults(mod.ItemType("MasochistEX"));
             items.Add(item2);
         }
-
-		public static DLCPlayer ModPlayer(Player player)
-		{
-			return player.GetModPlayer<DLCPlayer>();
-		}
-
-		public static ModHotKey stoneAbility;
-
-		public bool stoneAbilityb;
-    }
+	}
 }

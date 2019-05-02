@@ -15,18 +15,11 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 
 			if (stoneAbility.JustPressed)
 			{
-				for (int i = 0; i < stones.Length; i++)
+				if (stoneAbilityb)
 				{
-					if (stoneAbilityb == true)
-					{
-						Projectile.NewProjectile(player.Center, mod.ProjectileType("InfinityBeam"), Main.myPlayer); //noobas do something I am about to die
-					}
+					Projectile.NewProjectile();
 				}
 			}
-		}
-		public override void ResetEffects()
-		{
-			stoneAbilityb = false;
 		}
 	}
 }

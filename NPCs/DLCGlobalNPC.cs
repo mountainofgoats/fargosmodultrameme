@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 {
-	public class MyGlobalNPC : GlobalNPC
+	public class DLCGlobalNPC : GlobalNPC
 	{
 		//Slime Boss
 		int[] slimeBossSpikesX = { 100, 200, 300, 0, -100, -200, -300 };

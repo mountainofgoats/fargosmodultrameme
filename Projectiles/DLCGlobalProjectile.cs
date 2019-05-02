@@ -8,7 +8,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
     {
         public override void ModifyHitPlayer(Projectile projectile, Player target, ref int damage, ref bool crit)
         {
-            if (MyWorld.MasomodeEX)
+            if (DLCWorld.MasomodeEX)
             {
                 switch (projectile.type)
                 {
