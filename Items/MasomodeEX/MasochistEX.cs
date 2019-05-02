@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using FargowiltasSouls;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 {
@@ -11,7 +12,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Abominationn's Gift");
-            Tooltip.SetDefault("Activates/Deactivates Masochist Mode EX");
+            Tooltip.SetDefault("Activates/Deactivates Masochist Mode EX\nUse in masochist mode");
         }
 
         public override void SetDefaults()
@@ -28,7 +29,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override bool CanUseItem(Player player)
         {
-            return Main.expertMode;
+            return FargoWorld.MasochistMode;
         }
 
         public override bool UseItem(Player player)
