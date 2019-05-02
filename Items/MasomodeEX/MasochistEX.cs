@@ -29,7 +29,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override bool CanUseItem(Player player)
         {
-            return FargoWorld.MasochistMode;
+			return FargoWorld.MasochistMode;
         }
 
         public override bool UseItem(Player player)
