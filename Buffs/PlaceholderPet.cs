@@ -15,7 +15,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            DLCPlayer modPlayer = player.GetModPlayer<DLCPlayer>(mod);
             modPlayer.PlaceholderPet = true;
             player.buffTime[buffIndex] = 18000;            
             if (player.ownedProjectileCounts[mod.ProjectileType("PlaceholderPet")] < 1 && player.whoAmI == Main.myPlayer)

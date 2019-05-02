@@ -37,7 +37,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.MasomodeEX
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            DLCPlayer modPlayer = player.GetModPlayer<DLCPlayer>(mod);
             player.buffImmune[BuffID.CursedInferno] = true;
             player.buffImmune[BuffID.Ichor] = true;
             modPlayer.GougedFlesh = true;

@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
 {
-    public class MyGlobalItem : GlobalItem
+    public class DLCGlobalItem : GlobalItem
     {
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
-            if (MyWorld.MasomodeEX)
+            if (DLCWorld.MasomodeEX)
             {
                 switch (arg)
                 {

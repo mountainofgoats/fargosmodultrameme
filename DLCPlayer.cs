@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
-    public partial class MyPlayer : ModPlayer
+    public partial class DLCPlayer : ModPlayer
     {
         //Masomode EX items
         public bool RottenFlesh;
@@ -62,9 +62,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             items.Add(item2);
         }
 
-		public static MyPlayer DLCPlayer(Player player)
+		public static DLCPlayer ModPlayer(Player player)
 		{
-			return player.GetModPlayer<MyPlayer>();
+			return player.GetModPlayer<DLCPlayer>();
 		}
 
 		public static ModHotKey stoneAbility;

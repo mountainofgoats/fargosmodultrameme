@@ -30,7 +30,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles.Pets
         public override void AI()
         {
             Player player = Main.player[projectile.owner];
-            MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
+            DLCPlayer modPlayer = player.GetModPlayer<DLCPlayer>(mod);
             if (player.dead)
                 modPlayer.PlaceholderPet = false;
             if (modPlayer.PlaceholderPet)

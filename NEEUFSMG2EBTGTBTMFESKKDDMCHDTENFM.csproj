@@ -45,8 +45,8 @@
     <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
     <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
     <Compile Include="Items\MasomodeEX\SlimyShield.cs" />
-    <Compile Include="Items\ModName.cs" />
-    <Compile Include="Items\MyGlobalItem.cs" />
+    <Compile Include="Items\DLCModName.cs" />
+    <Compile Include="Items\DLCGlobalItem.cs" />
     <Compile Include="Items\OceanicElixir.cs" />
     <Compile Include="Items\Placeholder.cs" />
     <Compile Include="Items\SpecialWeapons\MindStone.cs" />
@@ -58,9 +58,9 @@
     <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
-    <Compile Include="MyPlayerHooks.cs" />
-    <Compile Include="MyPlayer.cs" />
-    <Compile Include="MyWorld.cs" />
+    <Compile Include="DLCPlayerHooks.cs" />
+    <Compile Include="DLCPlayer.cs" />
+    <Compile Include="DLCWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
     <Compile Include="NPCs\MyGlobalNPC.cs" />
     <Compile Include="Projectiles\BeeBullet.cs" />

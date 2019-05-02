@@ -24,7 +24,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 		public override void AI(NPC npc)
 		{
 			Player player = Main.player[npc.target];
-			if (MyWorld.MasomodeEX)
+			if (DLCWorld.MasomodeEX)
 			{
 				switch (npc.type)
 				{
@@ -193,8 +193,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 		public override void ModifyHitPlayer(NPC npc, Player target, ref int damage, ref bool crit)
 		{
 			Player player = Main.player[Main.myPlayer];
-			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>(mod);
-			if (MyWorld.MasomodeEX)
+			DLCPlayer modPlayer = player.GetModPlayer<DLCPlayer>(mod);
+			if (DLCWorld.MasomodeEX)
 			{
 				switch (npc.type)
 				{
@@ -230,7 +230,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.NPCs
 
 		public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 		{
-			if (MyWorld.MasomodeEX)
+			if (DLCWorld.MasomodeEX)
 			{
 				switch (npc.type)
 				{

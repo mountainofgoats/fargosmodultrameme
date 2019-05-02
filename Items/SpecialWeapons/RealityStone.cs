@@ -32,7 +32,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			MyPlayer.DLCPlayer(player).stoneAbilityb = true;
+			DLCPlayer.ModPlayer(player).stoneAbilityb = true;
 		}
     }
 }
