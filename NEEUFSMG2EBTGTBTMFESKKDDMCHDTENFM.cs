@@ -10,7 +10,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 
 		public override void Load()
 		{
-			DLCPlayer.stoneAbility = RegisterHotKey("Infinity Stone Ability", "P");
+			DLCPlayer.stoneAbility = RegisterHotKey("Special Ability", "P");
 		}
 	}
 }

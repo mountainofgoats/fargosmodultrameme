@@ -1,7 +1,7 @@
 using Terraria.ModLoader;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items
-{
+{ 
     public class NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM : ModItem
     {
         public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";

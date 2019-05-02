@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Buffs",
-    "\\Projectiles"
+    "\\Items"
   ],
-  "SelectedNode": "\\Projectiles\\BeeBullet.cs",
+  "SelectedNode": "\\DLCGlobalProjectile.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -3,6 +3,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using System;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {

@@ -29,7 +29,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			{
 				Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.t_Honey);
 			}
-
 			Collision.HitTiles(projectile.position, projectile.velocity, projectile.width, projectile.height);
 		}
 	}
