@@ -6,8 +6,12 @@ using Microsoft.Xna.Framework;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.SpecialWeapons
 {
+
 	public class StormBreaker : ModItem
 	{
+
+		public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+
 		public override void SetDefaults()
 		{
 			item.damage = 112;

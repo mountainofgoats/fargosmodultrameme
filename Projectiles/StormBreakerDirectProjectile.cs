@@ -8,6 +8,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 {
 	public class StormBreakerDirectProjectile : ModProjectile
 	{
+
+		public override string Texture => "NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM/Items/PlaceholderItem";
+
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Direct lightning released by the Stormbreaker");
