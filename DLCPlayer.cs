@@ -79,14 +79,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
-			if (stoneAbility.JustPressed)
-			{
-				if (stoneAbilityb)
-				{
-
-				}
-			}
-
 			if (stoneSpecialAbility.JustPressed)
 			{
 				if (stoneSpecialAbilityb)
