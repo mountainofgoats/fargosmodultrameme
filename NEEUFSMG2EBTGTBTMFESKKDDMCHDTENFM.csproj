@@ -58,11 +58,10 @@
     <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
-    <Compile Include="DLCPlayerHooks.cs" />
     <Compile Include="DLCPlayer.cs" />
     <Compile Include="DLCWorld.cs" />
     <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
-    <Compile Include="NPCs\MyGlobalNPC.cs" />
+    <Compile Include="NPCs\DLCGlobalNPC.cs" />
     <Compile Include="Projectiles\BeeBullet.cs" />
     <Compile Include="Projectiles\HiveArrow.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />

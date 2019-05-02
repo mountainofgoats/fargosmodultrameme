@@ -13,11 +13,13 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
         public bool BrainyBrain;
         public bool GiantStinger;
         public bool GougedFlesh;
-		public bool stoneAbilityb;
+		public bool stoneAbilityb; //fires a beam
+		public bool stoneSpecialAbilityb; //performs it's special ability; revert time; space manipulation; etc.
 		//Other
 		public bool PlaceholderPet;
 		//Hotkeys
 		public static ModHotKey stoneAbility;
+		public static ModHotKey stoneSpecialAbility;
 
         public override void ResetEffects()
         {
@@ -27,6 +29,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             GiantStinger = false;
             GougedFlesh = false;
 			stoneAbilityb = false;
+			stoneSpecialAbilityb = false;
             //Other
             PlaceholderPet = false;
         }
@@ -79,6 +82,14 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 				if (stoneAbilityb)
 				{
 
+				}
+			}
+
+			if (stoneSpecialAbility.JustPressed)
+			{
+				if (stoneSpecialAbilityb)
+				{
+					//perform special ability actions for the stones
 				}
 			}
 		}
