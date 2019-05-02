@@ -1,7 +1,8 @@
-using System.Collections.Generic;
-using Terraria;
+using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria;
+using System.Collections.Generic;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 {
@@ -70,5 +71,16 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
             item2.SetDefaults(mod.ItemType("MasochistEX"));
             items.Add(item2);
         }
+
+		public override void ProcessTriggers(TriggersSet triggersSet)
+		{
+			if (stoneAbility.JustPressed)
+			{
+				if (stoneAbilityb)
+				{
+
+				}
+			}
+		}
 	}
 }
