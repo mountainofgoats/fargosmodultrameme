@@ -30,8 +30,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 
 		public float Distance
 		{
-			get => projectile.ai[0];
-			set => projectile.ai[0] = value;
+			get { return projectile.ai[0]; }
+			set { projectile.ai[0] = value;  }
 		}
 
 		public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
