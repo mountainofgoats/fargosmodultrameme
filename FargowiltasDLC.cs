@@ -11,6 +11,7 @@ namespace FargowiltasDLC
 
 		public FargowiltasDLC()
 		{
+
 		}
 
 		public override void Load()
