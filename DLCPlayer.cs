@@ -91,7 +91,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 			{
 				if (stoneSpecialAbilityb)
 				{
-					//perform special ability actions for the stones
+					Projectile projectile = new Projectile();
+					Projectile.NewProjectile(player.Center, projectile.velocity, projectile.type, projectile.damage, projectile.knockBack, mod.ProjectileType("MindStoneBeam"));
 				}
 			}
 		}

@@ -1,4 +1,6 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -22,6 +24,12 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			projectile.melee = false;
 			projectile.ignoreWater = true;
 			projectile.tileCollide = false;
+		}
+
+		public float distance
+		{
+			get => projectile.ai[0];
+			set => projectile.ai[0] = value;
 		}
 
 		public override void AI()

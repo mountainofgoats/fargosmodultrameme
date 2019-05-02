@@ -25,6 +25,9 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			projectile.hide = true;
 		}
 
+		private const float MoveDistance = 60f;
+
+
 		public float Distance
 		{
 			get => projectile.ai[0];
@@ -33,25 +36,30 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 
 		public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
-			DrawBeam(spriteBatch, Main.projectileTexture[projectile.type], Main.player[projectile.owner].Center, projectile.velocity, 10, projectile.damage, -1.57f, 1f, 1000f, Color.White);
+			DrawTheBeamtexture(spriteBatch, Main.projectileTexture[projectile.type], Main.player[projectile.owner].Center, projectile.velocity, 10, projectile.damage, -1.57f, 1f, 1000f, Color.White, (int)MoveDistance);
 			return false;
 		}
 
-		public void DrawBeam(SpriteBatch spriteBatch, Texture2D texture, Vector2 start, Vector2 unit, float step, int damage, float rotation = 0f, float scale = 1f, float maxDist = 2000f, Color color = default(Color), int transDist = 50)
+		public void DrawTheBeamtexture(SpriteBatch spriteBatch, Texture2D texture, Vector2 start, Vector2 unit, float step, int damage, float rotation = 0f, float scale = 1f, float maximumDist = 256f, Color color = default(Color), int transitDist = 50)
 		{
 			Vector2 origin = start;
 			float r = unit.ToRotation() + rotation;
 
-			#region Draw the beam body
-
-			for (float i = transDist; i <= Distance; i += step)
+			#region Draw the body of the beam
+			for (float i = transitDist; i <= Distance; i += step)
 			{
 				Color c = Color.White;
 				origin = start + i * unit;
-				spriteBatch.Draw(texture, origin - Main.screenPosition,
-					new Rectangle(0, 26, 28, 26), i < transDist ? Color.Transparent : c, r,
-					new Vector2(28 * .5f, 26 * .5f), scale, 0, 0);
+				spriteBatch.Draw(texture, origin - Main.screenPosition, new Rectangle(0, 26, 28, 26), i < transitDist ? Color.Transparent : c, r, new Vector2(28 * .5f, 26 * .5f), scale, 0, 0);
 			}
+			#endregion
+
+			#region Draw the tail of the beam
+			spriteBatch.Draw(texture, start + unit * (transitDist - step) - Main.screenPosition, new Rectangle(0, 0, 28, 26), Color.White, r, new Vector2(28 * .5f, 26 * .5f), scale, 0, 0);
+			#endregion
+
+			#region Draw the head of the beam
+			spriteBatch.Draw(texture, start + unit * (transitDist - step) - Main.screenPosition, new Rectangle(0, 52, 28, 26), Color.White, r, new Vector2(28 * .5f, 26 * .5f), scale, 0, 0);
 			#endregion
 		}
 
@@ -62,24 +70,8 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Projectiles
 			float point = 0f;
 			// Run an AABB versus Line check to look for collisions, look up AABB collision first to see how it works
 			// It will look for collisions on the given line using AABB
-			return Collision.CheckAABBvLineCollision(targetHitbox.TopLeft(), targetHitbox.Size(), player.Center, player.Center + unit * Distance, 22, ref point);
-		}
-
-		public override void AI()
-		{
-
-		}
-
-		public override bool ShouldUpdatePosition()
-		{
-			return false;
-		}
-
-		public override void CutTiles()
-		{
-			DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
-			Vector2 unit = projectile.velocity;
-			Utils.PlotTileLine(projectile.Center, projectile.Center + unit * Distance, (projectile.width + 16) * projectile.scale, DelegateMethods.CutTiles);
+			return Collision.CheckAABBvLineCollision(targetHitbox.TopLeft(), targetHitbox.Size(), player.Center,
+				player.Center + unit * Distance, 22, ref point);
 		}
 	}
 }

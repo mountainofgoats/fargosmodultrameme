@@ -66,6 +66,7 @@
     <Compile Include="NPCs\DLCGlobalNPC.cs" />
     <Compile Include="Projectiles\BeeBullet.cs" />
     <Compile Include="Projectiles\CursedLaser.cs" />
+    <Compile Include="Projectiles\MindStoneBeam.cs" />
     <Compile Include="Projectiles\IchorLaser.cs" />
     <Compile Include="Projectiles\StormBreakerDirectProjectile.cs" />
     <Compile Include="Projectiles\StormBreakerProjectile.cs" />
@@ -113,6 +114,7 @@
     <Content Include="Projectiles\CursedLaser.png" />
     <Content Include="Projectiles\HiveArrow.png" />
     <Content Include="Projectiles\IchorLaser.png" />
+    <Content Include="Projectiles\MindStoneBeam.png" />
     <Content Include="Projectiles\PlaceholderProjectile.png" />
   </ItemGroup>
   <ItemGroup />
