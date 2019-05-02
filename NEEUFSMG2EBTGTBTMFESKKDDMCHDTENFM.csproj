@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM</RootNamespace>
+    <AssemblyName>NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Buffs\OceanicElixir.cs" />
+    <Compile Include="Buffs\PlaceholderPet.cs" />
+    <Compile Include="DLCGlobalProjectile.cs" />
+    <Compile Include="Items\Ammo\BeeBullet.cs" />
+    <Compile Include="Items\Ammo\HiveArrow.cs" />
+    <Compile Include="Items\MasomodeEX\BoneShield.cs" />
+    <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
+    <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
+    <Compile Include="Items\MasomodeEX\GiantStinger.cs" />
+    <Compile Include="Items\MasomodeEX\GougedFlesh.cs" />
+    <Compile Include="Items\MasomodeEX\MasochistEX.cs" />
+    <Compile Include="Items\MasomodeEX\RottenFlesh.cs" />
+    <Compile Include="Items\MasomodeEX\SlimyShield.cs" />
+    <Compile Include="Items\DLCModName.cs" />
+    <Compile Include="DLCGlobalItem.cs" />
+    <Compile Include="Items\OceanicElixir.cs" />
+    <Compile Include="Items\Placeholder.cs" />
+    <Compile Include="Items\SpecialWeapons\StormBreaker.cs" />
+    <Compile Include="Items\SpecialWeapons\MindStone.cs" />
+    <Compile Include="Items\SpecialWeapons\SpaceStone.cs" />
+    <Compile Include="Items\SpecialWeapons\RealityStone.cs" />
+    <Compile Include="Items\SpecialWeapons\TimeStone.cs" />
+    <Compile Include="Items\SpecialWeapons\SoulStone.cs" />
+    <Compile Include="Items\SpecialWeapons\PowerStone.cs" />
+    <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
+    <Compile Include="Items\WaterEssence.cs" />
+    <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
+    <Compile Include="DLCPlayer.cs" />
+    <Compile Include="DLCWorld.cs" />
+    <Compile Include="NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.cs" />
+    <Compile Include="NPCs\DLCGlobalNPC.cs" />
+    <Compile Include="Projectiles\BeeBullet.cs" />
+    <Compile Include="Projectiles\CursedLaser.cs" />
+    <Compile Include="Projectiles\MindStoneBeam.cs" />
+    <Compile Include="Projectiles\IchorLaser.cs" />
+    <Compile Include="Projectiles\StormBreakerDirectProjectile.cs" />
+    <Compile Include="Projectiles\StormBreakerProjectile.cs" />
+    <Compile Include="Projectiles\HiveArrow.cs" />
+    <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Fargowiltas">
+      <HintPath>D:\UselessStuff\Fargowiltas.dll</HintPath>
+    </Reference>
+    <Reference Include="FargowiltasSouls">
+      <HintPath>D:\UselessStuff\FargowiltasSouls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Buffs\PlaceholderBuff.png" />
+    <Content Include="Buffs\PlaceholderDebuff.png" />
+    <Content Include="Items\Ammo\BeeBullet.png" />
+    <Content Include="Items\Ammo\HiveArrow.png" />
+    <Content Include="Items\OceanicElixir.png" />
+    <Content Include="Items\PlaceholderItem.png" />
+    <Content Include="Items\SpecialWeapons\InfinityGauntlet.png" />
+    <Content Include="Items\SpecialWeapons\MindStone.png" />
+    <Content Include="Items\SpecialWeapons\PowerStone.png" />
+    <Content Include="Items\SpecialWeapons\RealityStone.png" />
+    <Content Include="Items\SpecialWeapons\SoulStone.png" />
+    <Content Include="Items\SpecialWeapons\SpaceStone.png" />
+    <Content Include="Items\SpecialWeapons\TimeStone.png" />
+    <Content Include="Items\Weapons\BeenadeLauncher.png" />
+    <Content Include="Projectiles\BeeBullet.png" />
+    <Content Include="Projectiles\CursedLaser.png" />
+    <Content Include="Projectiles\HiveArrow.png" />
+    <Content Include="Projectiles\IchorLaser.png" />
+    <Content Include="Projectiles\MindStoneBeam.png" />
+    <Content Include="Projectiles\PlaceholderProjectile.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

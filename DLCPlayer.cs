@@ -79,9 +79,9 @@ namespace FargowiltasDLC
 
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
-			if (stoneSpecialAbility.JustPressed)
+			if (stoneAbility.JustPressed)
 			{
-				if (stoneSpecialAbilityb)
+				if (stoneAbilityb)
 				{
 					Projectile.NewProjectile(player.Center, Vector2.Zero, mod.ProjectileType("MindStoneBeam"), 112, 6f, Main.myPlayer);
 				}
