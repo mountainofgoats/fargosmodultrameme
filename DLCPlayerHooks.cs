@@ -11,8 +11,6 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM
 	{
 		public override void ProcessTriggers(TriggersSet triggersSet)
 		{
-			string[] stones = new string[] { "MindStone", "PowerStone", "RealityStone", "SoulStone", "SpaceStone", "TimeStone" };
-
 			if (stoneAbility.JustPressed)
 			{
 				if (stoneAbilityb)
