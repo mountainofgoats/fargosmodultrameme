@@ -74,13 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DBZMOD">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
+      <HintPath>..\..\Mod Reader\DBZMOD\DBZMOD.dll</HintPath>
     </Reference>
     <Reference Include="Fargowiltas">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\Fargowiltas.dll</HintPath>
+      <HintPath>D:\UselessStuff\Fargowiltas.dll</HintPath>
     </Reference>
     <Reference Include="FargowiltasSouls">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\FargowiltasSouls.dll</HintPath>
+      <HintPath>D:\UselessStuff\FargowiltasSouls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -100,7 +100,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -5,19 +5,18 @@ using Terraria;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using System;
+using Terraria.ModLoader.IO;
 
 namespace FargowiltasDLC
 {
     public partial class DLCPlayer : ModPlayer
 	{ 
-
 		#region MasomodeEX Items
 		public bool RottenFlesh;
         public bool BrainyBrain;
         public bool GiantStinger;
         public bool GougedFlesh;
-		public bool stoneAbilityb; //fires a beam
-		public bool stoneSpecialAbilityb; //performs it's special ability; revert time; space manipulation; etc.
+		public bool stoneAbilityPb;
 		#endregion
 
 		#region other variables
@@ -31,6 +30,7 @@ namespace FargowiltasDLC
             BrainyBrain = false;
             GiantStinger = false;
             GougedFlesh = false;
+			stoneAbilityPb = false;
             //Other
             PlaceholderPet = false;
         }
@@ -75,5 +75,19 @@ namespace FargowiltasDLC
             item2.SetDefaults(mod.ItemType("MasochistEX"));
             items.Add(item2);
         }
+
+		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
+		{
+			if (Main.rand.NextBool(10) && stoneAbilityPb)
+			{
+				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
+
+				player.meleeDamage += 5f;
+				player.GetModPlayer<DBZMOD.MyPlayer>(dbzMOD).kiDamage += 5f;
+
+				Main.NewText("true");
+			}
+			base.OnHitNPC(item, target, damage, knockback, crit);
+		}
 	}
 }
