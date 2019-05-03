@@ -3,24 +3,19 @@ using Terraria.ModLoader;
 
 namespace FargowiltasDLC
 {
-	public class FargowiltasDLC : Mod
+	internal class FargowiltasDLC : Mod
 	{
 		#region Internals
-		internal static FargowiltasDLC CheckLoad;
+		internal static FargowiltasDLC DLCInstance;
 		#endregion
 
 		#region bools
-		public bool DBTLoaded;
+		internal bool DBTLoaded;
 		#endregion
-
-		public FargowiltasDLC()
-		{
-
-		}
 
 		public override void Load()
 		{
-			CheckLoad = this;
+			DLCInstance = this;
 		}
 
 		public override void PostSetupContent()
