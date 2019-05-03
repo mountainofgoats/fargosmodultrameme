@@ -10,6 +10,9 @@ namespace FargowiltasDLC
 {
     public partial class DLCPlayer : ModPlayer
     {
+		#region Internal
+		internal static FargowiltasDLC CheckLoad;
+
 		#region MasomodeEX Items
 		public bool RottenFlesh;
         public bool BrainyBrain;

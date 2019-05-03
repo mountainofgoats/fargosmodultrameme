@@ -32,6 +32,7 @@ namespace FargowiltasDLC.Items.SpecialWeapons
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+
 		}
     }
 }

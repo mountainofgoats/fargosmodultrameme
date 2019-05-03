@@ -20,6 +20,7 @@ namespace FargowiltasDLC.Items.SpecialWeapons
                 if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
                 {
                     tooltipLine.overrideColor = new Color?(new Color(60, 36, 181));
+					if (FargowiltasDLC.)
                 }
             }
         }
