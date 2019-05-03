@@ -31,18 +31,41 @@ namespace FargowiltasDLC.Items.Special
             item.accessory = true;
         }
 
+		public float indexer = 0f;
+		public int counter;
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		{
+			indexer += 0.01f;
+			counter = 0;
+
+			base.OnHitNPC(player, target, damage, knockBack, crit);
+		}
+
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			Mod DBTR = ModLoader.GetMod("DBT");
+			Mod DBZMOD = ModLoader.GetMod("DBZMOD");
+			counter++;
 
-			player.meleeDamage += 1.5f;
-			player.magicDamage += 1.5f;
-			player.minionDamage += 1.5f;
-			player.rangedDamage += 1.5f;
-			player.thrownDamage += 1.5f;
-			player.GetModPlayer<DBTR.Players.DBTRPlayer>(DBTR).KiMultiplier += 1.5f;
-			player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f;
+			while (indexer < 1.51f && counter <= 1200)
+			{
+				player.meleeDamage += 1.5f + indexer;
+				player.magicDamage += 1.5f + indexer;
+				player.minionDamage += 1.5f + indexer;
+				player.rangedDamage += 1.5f + indexer;
+				player.thrownDamage += 1.5f + indexer;
+				player.GetModPlayer<DBZMOD.MyPlayer>(DBZMOD).kiDamage += 1.5f + indexer;
+				player.GetModPlayer<DBZMOD.MyPlayer>(DBZMOD).kiMax2 += 3500;
+				player.GetModPlayer<DBZMOD.MyPlayer>(DBZMOD).kiRegen += counter;
+				player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f + indexer;
 
+				if (counter > 1200)
+				{
+					indexer = 0f;
+					break;
+				}
+			}
 			player.GetModPlayer<DLCPlayer>().stoneAbilityPb = true;
 		}
     }
