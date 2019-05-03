@@ -38,6 +38,9 @@
     <Compile Include="DLCGlobalProjectile.cs" />
     <Compile Include="Items\Ammo\BeeBullet.cs" />
     <Compile Include="Items\Ammo\HiveArrow.cs" />
+    <Compile Include="Items\FireworkClass\FireworkDamageItem.cs" />
+    <Compile Include="Items\FireworkClass\FireworkDamagePlayer.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT1.cs" />
     <Compile Include="Items\MasomodeEX\BoneShield.cs" />
     <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
@@ -98,7 +101,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
