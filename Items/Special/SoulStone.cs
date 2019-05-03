@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace FargowiltasDLC.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.Special
 {
-	public class TimeStone : ModItem
+	public class SoulStone : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Time Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, capable of manipulating time.");
+			DisplayName.SetDefault("Soul Stone");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, capable of manipulating others souls.");
 		}
         public override void ModifyTooltips(List<TooltipLine> list)
         {
@@ -18,15 +18,15 @@ namespace FargowiltasDLC.Items.SpecialWeapons
             {
                 if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
                 {
-                    tooltipLine.overrideColor = new Color?(new Color(20, 137, 96));
+                    tooltipLine.overrideColor = new Color?(new Color(181, 97, 27));
                 }
             }
         }
 
         public override void SetDefaults()
         {
-            item.width = 22;
-            item.height = 22;
+            item.width = 18;
+            item.height = 26;
             item.accessory = true;
         }
 
@@ -35,4 +35,3 @@ namespace FargowiltasDLC.Items.SpecialWeapons
 		}
     }
 }
-

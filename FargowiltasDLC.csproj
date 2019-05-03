@@ -40,6 +40,7 @@
     <Compile Include="Items\Ammo\HiveArrow.cs" />
     <Compile Include="Items\FireworkClass\FireworkDamageItem.cs" />
     <Compile Include="Items\FireworkClass\FireworkDamagePlayer.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT2.cs" />
     <Compile Include="Items\FireworkClass\FireworkT1.cs" />
     <Compile Include="Items\MasomodeEX\BoneShield.cs" />
     <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
@@ -53,16 +54,14 @@
     <Compile Include="DLCGlobalItem.cs" />
     <Compile Include="Items\OceanicElixir.cs" />
     <Compile Include="Items\Placeholder.cs" />
-    <Compile Include="Items\SpecialWeapons\StormBreaker.cs" />
-    <Compile Include="Items\SpecialWeapons\MindStone.cs" />
-    <Compile Include="Items\SpecialWeapons\SpaceStone.cs" />
-    <Compile Include="Items\SpecialWeapons\RealityStone.cs" />
-    <Compile Include="Items\SpecialWeapons\TimeStone.cs" />
-    <Compile Include="Items\SpecialWeapons\SoulStone.cs" />
-    <Compile Include="Items\SpecialWeapons\PowerStone.cs" />
-    <Compile Include="Items\SpecialWeapons\InfinityGauntlet.cs" />
+    <Compile Include="Items\Special\MindStone.cs" />
+    <Compile Include="Items\Special\SpaceStone.cs" />
+    <Compile Include="Items\Special\RealityStone.cs" />
+    <Compile Include="Items\Special\TimeStone.cs" />
+    <Compile Include="Items\Special\SoulStone.cs" />
+    <Compile Include="Items\Special\PowerStone.cs" />
+    <Compile Include="Items\Special\InfinityGauntlet.cs" />
     <Compile Include="Items\WaterEssence.cs" />
-    <Compile Include="Items\Weapons\BeenadeLauncher.cs" />
     <Compile Include="DLCPlayer.cs" />
     <Compile Include="DLCWorld.cs" />
     <Compile Include="FargowiltasDLC.cs" />
@@ -70,20 +69,18 @@
     <Compile Include="Projectiles\BeeBullet.cs" />
     <Compile Include="Projectiles\CursedLaser.cs" />
     <Compile Include="Projectiles\IchorLaser.cs" />
-    <Compile Include="Projectiles\StormBreakerDirectProjectile.cs" />
-    <Compile Include="Projectiles\StormBreakerProjectile.cs" />
     <Compile Include="Projectiles\HiveArrow.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="DBZMOD">
-      <HintPath>..\..\Mod Reader\DBZMOD\DBZMOD.dll</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
     </Reference>
     <Reference Include="Fargowiltas">
-      <HintPath>references\Fargowiltas.dll</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\Fargowiltas.dll</HintPath>
     </Reference>
     <Reference Include="FargowiltasSouls">
-      <HintPath>references\FargowiltasSouls.dll</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\FargowiltasSouls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -103,7 +100,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -113,14 +110,13 @@
     <Content Include="Items\Ammo\HiveArrow.png" />
     <Content Include="Items\OceanicElixir.png" />
     <Content Include="Items\PlaceholderItem.png" />
-    <Content Include="Items\SpecialWeapons\InfinityGauntlet.png" />
-    <Content Include="Items\SpecialWeapons\MindStone.png" />
-    <Content Include="Items\SpecialWeapons\PowerStone.png" />
-    <Content Include="Items\SpecialWeapons\RealityStone.png" />
-    <Content Include="Items\SpecialWeapons\SoulStone.png" />
-    <Content Include="Items\SpecialWeapons\SpaceStone.png" />
-    <Content Include="Items\SpecialWeapons\TimeStone.png" />
-    <Content Include="Items\Weapons\BeenadeLauncher.png" />
+    <Content Include="Items\Special\InfinityGauntlet.png" />
+    <Content Include="Items\Special\MindStone.png" />
+    <Content Include="Items\Special\PowerStone.png" />
+    <Content Include="Items\Special\RealityStone.png" />
+    <Content Include="Items\Special\SoulStone.png" />
+    <Content Include="Items\Special\SpaceStone.png" />
+    <Content Include="Items\Special\TimeStone.png" />
     <Content Include="Projectiles\BeeBullet.png" />
     <Content Include="Projectiles\CursedLaser.png" />
     <Content Include="Projectiles\HiveArrow.png" />
