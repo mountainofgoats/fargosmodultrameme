@@ -32,8 +32,6 @@ namespace FargowiltasDLC.Items.SpecialWeapons
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			DLCPlayer.ModPlayer(player).stoneAbilityb = true;
-			DLCPlayer.ModPlayer(player).stoneSpecialAbilityb = true;
 		}
     }
 }

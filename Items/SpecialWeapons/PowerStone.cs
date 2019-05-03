@@ -33,8 +33,11 @@ namespace FargowiltasDLC.Items.SpecialWeapons
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			DLCPlayer.ModPlayer(player).stoneAbilityb = true;
-			DLCPlayer.ModPlayer(player).stoneSpecialAbilityb = true;
+			Mod dBZMod = ModLoader.GetMod("DBZMOD");
+			Mod thoriumMod = ModLoader.GetMod("ThoriumMod");
+
+			player.GetModPlayer<DBZMOD.MyPlayer>(dBZMod).kiDamage += 1.5f;
+			player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f;
 		}
     }
 }

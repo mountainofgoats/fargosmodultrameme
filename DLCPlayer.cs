@@ -30,8 +30,6 @@ namespace FargowiltasDLC
             BrainyBrain = false;
             GiantStinger = false;
             GougedFlesh = false;
-			stoneAbilityb = false;
-			stoneSpecialAbilityb = false;
             //Other
             PlaceholderPet = false;
         }
@@ -76,16 +74,5 @@ namespace FargowiltasDLC
             item2.SetDefaults(mod.ItemType("MasochistEX"));
             items.Add(item2);
         }
-
-		public override void ProcessTriggers(TriggersSet triggersSet)
-		{
-			if (FargowiltasDLC.stoneAbility.JustPressed)
-			{
-				if (stoneAbilityb)
-				{
-					Projectile.NewProjectile(player.Center, Vector2.Zero, 1, 112, 6f, mod.ProjectileType("MindStoneBeam"), Main.myPlayer);
-				}
-			}
-		}
 	}
 }

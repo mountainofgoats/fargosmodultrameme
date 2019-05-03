@@ -40,7 +40,7 @@ namespace FargowiltasDLC
 		}
 		/// <summary>
 		/// This is a function to determine the closest distance to a selected target in a particular radius (distanceToTarget(f)) and create a new !MODPROJECTILE!
-		/// depending on the string projectileName. Please note that using this will force the projectile to be auto-homing. The generation of the 
+		/// depending on the string projectileName. Please note that using this will force the projectile to be auto-homing.
 		/// </summary>
 		public void CreateProjIfCloseToTarget(string projectileName, int Type, int Damage, float KnockBack, float distanceToTarget, Vector2 OffSet)
 		{
