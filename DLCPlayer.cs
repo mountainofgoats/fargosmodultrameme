@@ -66,28 +66,14 @@ namespace FargowiltasDLC
                 target.AddBuff(BuffID.Ichor, Main.rand.Next(180, 240));
         }
 
-        public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
-        {
-            Item item = new Item();
-            item.SetDefaults(mod.ItemType("Placeholder"));
-            items.Add(item);
-            Item item2 = new Item();
-            item2.SetDefaults(mod.ItemType("MasochistEX"));
-            items.Add(item2);
-        }
-
-		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
+		public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
 		{
-			if (Main.rand.NextBool(10) && stoneAbilityPb)
-			{
-				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
-
-				player.meleeDamage += 5f;
-				player.GetModPlayer<DBZMOD.MyPlayer>(dbzMOD).kiDamage += 5f;
-
-				Main.NewText("true");
-			}
-			base.OnHitNPC(item, target, damage, knockback, crit);
+			Item item = new Item();
+			item.SetDefaults(mod.ItemType("Placeholder"));
+			items.Add(item);
+			Item item2 = new Item();
+			item2.SetDefaults(mod.ItemType("MasochistEX"));
+			items.Add(item2);
 		}
 	}
 }

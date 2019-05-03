@@ -73,8 +73,8 @@
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DBZMOD">
-      <HintPath>..\..\Mod Reader\DBZMOD\DBZMOD.dll</HintPath>
+    <Reference Include="DBTR">
+      <HintPath>..\..\references\DBTR.dll</HintPath>
     </Reference>
     <Reference Include="Fargowiltas">
       <HintPath>D:\UselessStuff\Fargowiltas.dll</HintPath>

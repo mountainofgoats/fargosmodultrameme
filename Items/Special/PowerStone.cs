@@ -33,15 +33,14 @@ namespace FargowiltasDLC.Items.Special
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			Mod dBZMod = ModLoader.GetMod("DBZMOD");
+			Mod DBTR = ModLoader.GetMod("DBT");
 
 			player.meleeDamage += 1.5f;
 			player.magicDamage += 1.5f;
 			player.minionDamage += 1.5f;
 			player.rangedDamage += 1.5f;
 			player.thrownDamage += 1.5f;
-			player.GetModPlayer<DBZMOD.MyPlayer>(dBZMod).kiDamage += 1.5f;
-			player.GetModPlayer<DBZMOD.MyPlayer>(dBZMod).kiMax2 += 5000;
+			player.GetModPlayer<DBTR.Players.DBTRPlayer>(DBTR).KiMultiplier += 1.5f;
 			player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f;
 
 			player.GetModPlayer<DLCPlayer>().stoneAbilityPb = true;
