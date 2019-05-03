@@ -4,12 +4,18 @@ namespace FargowiltasDLC
 {
 	public class FargowiltasDLC : Mod
 	{
-		#region Hotkeys
+		#region Internals
+		internal static FargowiltasDLC CheckLoad;
 		#endregion
 
 		public FargowiltasDLC()
 		{
 
+		}
+
+		public override void Load()
+		{
+			CheckLoad = this;
 		}
 	}
 }
