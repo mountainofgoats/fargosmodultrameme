@@ -1,11 +1,8 @@
-using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using System;
-using Terraria.ModLoader.IO;
+using DBZMOD;
 
 namespace FargowiltasDLC
 {
@@ -83,7 +80,7 @@ namespace FargowiltasDLC
 				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
 
 				player.meleeDamage += 5f;
-				player.GetModPlayer<DBZMOD.MyPlayer>(dbzMOD).kiDamage += 5f;
+				player.GetModPlayer<MyPlayer>(dbzMOD).kiDamage += 5f;
 
 				Main.NewText("true");
 			}
