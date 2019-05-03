@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace FargowiltasDLC.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.Special
 {
 	public class InfinityGauntlet : ModItem
 	{

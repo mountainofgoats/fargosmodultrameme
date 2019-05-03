@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace FargowiltasDLC.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.Special
 {
-	public class SoulStone : ModItem
+	public class RealityStone : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Soul Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, capable of manipulating others souls.");
+			DisplayName.SetDefault("Reality Stone");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, capable of manipulating the reality.");
 		}
         public override void ModifyTooltips(List<TooltipLine> list)
         {
@@ -18,15 +18,15 @@ namespace FargowiltasDLC.Items.SpecialWeapons
             {
                 if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
                 {
-                    tooltipLine.overrideColor = new Color?(new Color(181, 97, 27));
+                    tooltipLine.overrideColor = new Color?(new Color(186, 33, 69));
                 }
             }
         }
 
         public override void SetDefaults()
         {
-            item.width = 18;
-            item.height = 26;
+            item.width = 32;
+            item.height = 28;
             item.accessory = true;
         }
 
@@ -35,3 +35,4 @@ namespace FargowiltasDLC.Items.SpecialWeapons
 		}
     }
 }
+

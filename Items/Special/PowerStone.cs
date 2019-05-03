@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace FargowiltasDLC.Items.SpecialWeapons
+namespace FargowiltasDLC.Items.Special
 {
-	public class MindStone : ModItem
+	public class PowerStone : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mind Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding power to control one's mind.");
+			DisplayName.SetDefault("Power Stone");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.");
 		}
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -19,21 +19,21 @@ namespace FargowiltasDLC.Items.SpecialWeapons
             {
                 if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
                 {
-                    tooltipLine.overrideColor = new Color?(new Color(242, 206, 48));
+                    tooltipLine.overrideColor = new Color?(new Color(60, 36, 181));
                 }
             }
         }
 
         public override void SetDefaults()
-		{
-            item.width = 30;
-            item.height = 22;
+        {
+            item.width = 44;
+            item.height = 26;
             item.accessory = true;
-		}
+        }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-		}
-	}
+        }
+    }
 }
 

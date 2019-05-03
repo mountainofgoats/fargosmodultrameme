@@ -4,19 +4,19 @@ using FargowiltasDLC.Items.FireworkClass;
 
 namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.FireworkClass
 {
-    public class FireworkT1 : FireworkDamageItem
+    public class FireworkT2 : FireworkDamageItem
     {
         public override string Texture => "Terraria/Item_" + ItemID.RedRocket;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Firework Tier 1");
-            Tooltip.SetDefault("The most weak firework, made from wood");
+            DisplayName.SetDefault("Firework Tier 2");
+            Tooltip.SetDefault("The weak firework, made from gold/platinum\nNice for killing some bosses");
         }
 
         public override void SafeSetDefaults()
         {
-            item.damage = 5;
+            item.damage = 10;
             item.crit = 4;
             item.width = 50;
             item.height = 50;
@@ -33,8 +33,13 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.FireworkClass
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Wood, 20);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ItemID.GoldBar, 10);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.PlatinumBar, 10);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
