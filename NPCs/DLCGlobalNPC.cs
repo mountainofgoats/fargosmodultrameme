@@ -141,8 +141,11 @@ namespace FargowiltasDLC.NPCs
 						}
 						npc.scale = 1.25f;
 						break;
-					case NPCID.SkeletronHand:
-                        npc.dontTakeDamage = true;
+					case NPCID.SkeletronHead:
+						if (NPC.AnyNPCs(NPCID.SkeletronHand))
+							npc.dontTakeDamage = true;
+						else
+							npc.dontTakeDamage = false;
 						break;
 					case NPCID.WallofFleshEye:
 						Counter += 1f;
@@ -183,29 +186,6 @@ namespace FargowiltasDLC.NPCs
 							Counter = 0f;
 						}
 						break;
-                    case NPCID.TheDestroyerBody:
-                        Counter += 1f;
-                        if (Counter >= 300f && Main.rand.Next(400) == 0) //very low chance to avoid spam
-                        {
-                            Vector2 velocity = player.Center - npc.Center;
-                            float magnitude = (float)Math.Sqrt(velocity.X * velocity.X + velocity.Y * velocity.Y);
-                            if (magnitude > 0)
-                                velocity *= 65f / magnitude;
-                            else
-                                velocity = new Vector2(0f, 65f);
-                            if (Main.rand.Next(5) == 0)
-                            {
-                                projectile = Projectile.NewProjectile(npc.Center, velocity, mod.ProjectileType("SplittingLaser"), npc.damage / 4, 0f, player.whoAmI);
-                                Main.projectile[projectile].tileCollide = false;
-                            }
-                            else
-                            {
-                                projectile = Projectile.NewProjectile(npc.Center, velocity, mod.ProjectileType("TileIgnoringLaser"), npc.damage / 4, 0f, player.whoAmI);
-                            }
-                            Main.PlaySound(SoundID.Item33, npc.position);
-                            Counter = 0f;
-                        }
-                        break;
 				}
 			}
 		}
@@ -242,6 +222,10 @@ namespace FargowiltasDLC.NPCs
 						break;
 				}
 			}
+			//if (modPlayer.GougedFlesh)
+			//{
+			//	//blah blah blah throw flesh|| imagine putting that even though it is not even coded in :begone:
+			//}
 		}
 
 		public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
@@ -256,17 +240,11 @@ namespace FargowiltasDLC.NPCs
 						if (projectile.penetrate > 1 || projectile.penetrate == -1)
 						{
 							damage /= 2;
+							crit = false;
+							knockback = 0f;
 						}
 						break;
-                    case NPCID.TheDestroyer:
-                    case NPCID.TheDestroyerBody:
-                    case NPCID.TheDestroyerTail:
-                        if (projectile.penetrate > 1 || projectile.penetrate == -1)
-                        {
-                            damage /= 10;
-                        }
-                        break;
-                }
+				}
 			}
 		}
 
