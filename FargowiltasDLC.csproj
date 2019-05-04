@@ -80,8 +80,11 @@
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DBZMOD">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
+	  <Reference Include="DBZMOD">
+		  <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
+	  </Reference>
+    <Reference Include="DBTR">
+      <HintPath>..\..\references\DBTR.dll</HintPath>
     </Reference>
     <Reference Include="Fargowiltas">
       <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\Fargowiltas.dll</HintPath>
