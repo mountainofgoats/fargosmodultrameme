@@ -45,10 +45,10 @@ namespace FargowiltasDLC.Items.Special
 		public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
 		{
 			Texture2D texture = mod.GetTexture("Items/PlaceholderItem");
+			Vector2 position = item.position - Main.screenPosition;
 
-			spriteBatch.Draw(texture, Vector2.Zero, null, Color.White, 0, Vector2.Zero, scale, SpriteEffects.None, 0f);
+			spriteBatch.Draw(texture, position, null, Color.White, 0, Vector2.Zero , scale * 0.5f, SpriteEffects.None, 0f);
 			return false;
-
 		}
 
 		public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)

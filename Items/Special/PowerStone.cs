@@ -10,7 +10,7 @@ namespace FargowiltasDLC.Items.Special
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Power Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+3500 max Ki\n+150% Ki Damage\n+150% firework damage.");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+3500 max Ki\n+150% Ki Damage\n+150% firework damage\n10% chance to deliver 5x the damage\nEvery time you attack an enemy you get +1% attack boost. Caps at 150%. Restored if not attacking for 20 seconds");
 		}
 
         public override void ModifyTooltips(List<TooltipLine> list)
