@@ -1,8 +1,11 @@
+using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using System.Collections.Generic;
-using DBZMOD;
+using Microsoft.Xna.Framework;
+using System;
+using Terraria.ModLoader.IO;
 
 namespace FargowiltasDLC
 {
@@ -65,15 +68,6 @@ namespace FargowiltasDLC
 
 		public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
 		{
-			if (Main.rand.NextBool(10) && stoneAbilityPb)
-			{
-				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
-
-				player.meleeDamage += 5f;
-				player.GetModPlayer<MyPlayer>(dbzMOD).kiDamage += 5f;
-
-				Main.NewText("true");
-			}
 			Item item = new Item();
 			item.SetDefaults(mod.ItemType("Placeholder"));
 			items.Add(item);
