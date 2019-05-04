@@ -11,7 +11,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.FireworkClass
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Firework Tier 2");
-            Tooltip.SetDefault("Weak firework, made from gold/platinum");
+            Tooltip.SetDefault("The weak firework, made from gold/platinum\nNice for killing some bosses");
         }
 
         public override void SafeSetDefaults()
@@ -27,7 +27,7 @@ namespace NEEUFSMG2EBTGTBTMFESKKDDMCHDTENFM.Items.FireworkClass
             item.noMelee = true;
             item.noUseGraphic = true;
             item.shoot = ProjectileID.RocketFireworkRed;
-            item.shootSpeed = 6f;
+            item.shootSpeed = 5f;
         }
 
         public override void AddRecipes()
