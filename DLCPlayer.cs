@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using System.Collections.Generic;
 using DBZMOD;
+using System;
 
 namespace FargowiltasDLC
 {
@@ -18,6 +19,9 @@ namespace FargowiltasDLC
 
 		#region other variables
 		public bool PlaceholderPet;
+		public double dmgIncreasePS = 0;
+		public bool pwStone;
+		public int counter = 0;
 		#endregion
 
 		public override void ResetEffects()
@@ -28,7 +32,8 @@ namespace FargowiltasDLC
             GiantStinger = false;
             GougedFlesh = false;
 			stoneAbilityPb = false;
-            //Other
+			//Other
+			pwStone = false;
             PlaceholderPet = false;
         }
 
@@ -80,6 +85,46 @@ namespace FargowiltasDLC
 			Item item2 = new Item();
 			item2.SetDefaults(mod.ItemType("MasochistEX"));
 			items.Add(item2);
+		}
+
+		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
+		{
+			if (stoneAbilityPb)
+			{
+				this.counter = 0;
+				this.dmgIncreasePS += 0.01;
+			}
+		}
+
+		public override void GetWeaponDamage(Item item, ref int damage)
+		{
+			if (stoneAbilityPb)
+			{
+				double temp = dmgIncreasePS * damage;
+				damage += (int)temp;
+
+				if (Main.rand.NextBool(10))
+				{
+					damage *= 5;
+				}
+			}
+		}
+
+		public override void PreUpdate()
+		{
+			if (stoneAbilityPb)
+			{
+				Mod dBZMOD = ModLoader.GetMod("DBZMOD");
+				this.counter++;
+
+				player.GetModPlayer<MyPlayer>(dBZMOD).kiRegen += counter;
+
+				if (counter == 1200)
+				{
+					this.dmgIncreasePS = 0f;
+					counter = 0;
+				}
+			}
 		}
 	}
 }

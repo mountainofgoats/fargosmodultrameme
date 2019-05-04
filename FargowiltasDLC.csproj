@@ -40,13 +40,6 @@
     <Compile Include="Items\Ammo\HiveArrow.cs" />
     <Compile Include="Items\FireworkClass\FireworkDamageItem.cs" />
     <Compile Include="Items\FireworkClass\FireworkDamagePlayer.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT9.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT8.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT7.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT6.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT5.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT4.cs" />
-    <Compile Include="Items\FireworkClass\FireworkT3.cs" />
     <Compile Include="Items\FireworkClass\FireworkT2.cs" />
     <Compile Include="Items\FireworkClass\FireworkT1.cs" />
     <Compile Include="Items\MasomodeEX\BoneShield.cs" />
@@ -92,10 +85,10 @@
       <HintPath>..\..\Mod Reader\DBZMOD\DBZMOD.dll</HintPath>
     </Reference>
     <Reference Include="Fargowiltas">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\Fargowiltas.dll</HintPath>
+      <HintPath>D:\UselessStuff\Fargowiltas.dll</HintPath>
     </Reference>
     <Reference Include="FargowiltasSouls">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\FargowiltasSouls.dll</HintPath>
+      <HintPath>D:\UselessStuff\FargowiltasSouls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -115,7 +108,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="Terraria">
-      <HintPath>D:\Games\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+      <HintPath>D:\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +118,7 @@
     <Content Include="Items\Ammo\HiveArrow.png" />
     <Content Include="Items\OceanicElixir.png" />
     <Content Include="Items\PlaceholderItem.png" />
-    <Content Include="Items\Special\InfinityGauntlet.png" />
+    <Content Include="Items\Special\InfinityGauntletInventory.png" />
     <Content Include="Items\Special\MindStone.png" />
     <Content Include="Items\Special\PowerStone.png" />
     <Content Include="Items\Special\RealityStone.png" />
