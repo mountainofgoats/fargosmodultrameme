@@ -70,5 +70,15 @@ namespace FargowiltasDLC
 				}
 			}
 		}
+
+
+		/// <summary>
+		/// This method is used in order to get a certain buff on NPC hit and a cooldown if not used for too much. For example:
+		/// While hitting enemies you gain 1% more damage, max damage boost is 150%
+		/// </summary>
+		public virtual void GetinCertainPeriod()
+		{
+
+		}
 	}
 }
