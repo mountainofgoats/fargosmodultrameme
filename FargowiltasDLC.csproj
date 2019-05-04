@@ -73,9 +73,6 @@
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="DBTR">
-      <HintPath>..\..\references\DBTR.dll</HintPath>
-    </Reference>
     <Reference Include="DBZMOD">
       <HintPath>..\..\Mod Reader\DBZMOD\DBZMOD.dll</HintPath>
     </Reference>
@@ -113,7 +110,7 @@
     <Content Include="Items\Ammo\HiveArrow.png" />
     <Content Include="Items\OceanicElixir.png" />
     <Content Include="Items\PlaceholderItem.png" />
-    <Content Include="Items\Special\InfinityGauntlet.png" />
+    <Content Include="Items\Special\InfinityGauntletInventory.png" />
     <Content Include="Items\Special\MindStone.png" />
     <Content Include="Items\Special\PowerStone.png" />
     <Content Include="Items\Special\RealityStone.png" />
