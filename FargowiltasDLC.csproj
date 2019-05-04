@@ -75,14 +75,16 @@
     <Compile Include="NPCs\DLCGlobalNPC.cs" />
     <Compile Include="Projectiles\BeeBullet.cs" />
     <Compile Include="Projectiles\CursedLaser.cs" />
+    <Compile Include="Projectiles\SplittingLaser.cs" />
+    <Compile Include="Projectiles\TileIgnoringLaser.cs" />
     <Compile Include="Projectiles\IchorLaser.cs" />
     <Compile Include="Projectiles\HiveArrow.cs" />
     <Compile Include="Projectiles\Pets\PlaceholderPet.cs" />
   </ItemGroup>
   <ItemGroup>
-	  <Reference Include="DBZMOD">
-		  <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
-	  </Reference>
+    <Reference Include="DBZMOD">
+      <HintPath>D:\Games\Steam\steamapps\common\Terraria\ModCompile\DBZMOD.dll</HintPath>
+    </Reference>
     <Reference Include="DBTR">
       <HintPath>..\..\references\DBTR.dll</HintPath>
     </Reference>
@@ -135,6 +137,8 @@
     <Content Include="Projectiles\HiveArrow.png" />
     <Content Include="Projectiles\IchorLaser.png" />
     <Content Include="Projectiles\PlaceholderProjectile.png" />
+    <Content Include="Projectiles\SplittingLaser.png" />
+    <Content Include="Projectiles\TileIgnoringLaser.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
