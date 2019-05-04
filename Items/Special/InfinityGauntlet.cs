@@ -37,26 +37,9 @@ namespace FargowiltasDLC.Items.Special
 			item.rare = 11;
 			item.maxStack = 1;
 			item.useStyle = 5;
-			item.useTime = 20;
+			item.useTime = 200;
 			item.useAnimation = 20;
-			item.UseSound = SoundID.Item123;
-		}
-
-		public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
-		{
-			Texture2D texture = mod.GetTexture("Items/PlaceholderItem");
-			Vector2 position = item.position - Main.screenPosition;
-
-			spriteBatch.Draw(texture, position, null, Color.White, 0, Vector2.Zero , scale * 0.5f, SpriteEffects.None, 0f);
-			return false;
-		}
-
-		public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
-		{
-			Texture2D texture = mod.GetTexture("Items/Special/InfinityGauntletInventory");
-
-			spriteBatch.Draw(texture, position, null, Color.White, 0, origin, scale, SpriteEffects.None, 0f);
-			return false;
+			item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/InfinityGauntlet");
 		}
 
 		public override void AddRecipes()

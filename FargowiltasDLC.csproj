@@ -42,6 +42,13 @@
     <Compile Include="Items\FireworkClass\FireworkDamagePlayer.cs" />
     <Compile Include="Items\FireworkClass\FireworkT2.cs" />
     <Compile Include="Items\FireworkClass\FireworkT1.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT3.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT4.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT5.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT6.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT7.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT8.cs" />
+    <Compile Include="Items\FireworkClass\FireworkT9.cs" />
     <Compile Include="Items\MasomodeEX\BoneShield.cs" />
     <Compile Include="Items\MasomodeEX\BrainyBrain.cs" />
     <Compile Include="Items\MasomodeEX\CoreofEvil.cs" />
@@ -113,6 +120,7 @@
     <Content Include="Items\Special\InfinityGauntletInventory.png" />
     <Content Include="Items\Special\MindStone.png" />
     <Content Include="Items\Special\PowerStone.png" />
+    <Content Include="Items\Special\PowerStoneEffect.png" />
     <Content Include="Items\Special\RealityStone.png" />
     <Content Include="Items\Special\SoulStone.png" />
     <Content Include="Items\Special\SpaceStone.png" />
@@ -122,6 +130,7 @@
     <Content Include="Projectiles\HiveArrow.png" />
     <Content Include="Projectiles\IchorLaser.png" />
     <Content Include="Projectiles\PlaceholderProjectile.png" />
+    <Content Include="Sounds\InfinityGauntletUsage.mp3" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

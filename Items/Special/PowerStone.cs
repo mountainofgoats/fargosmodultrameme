@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using DBZMOD;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
@@ -10,7 +12,7 @@ namespace FargowiltasDLC.Items.Special
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Power Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+3500 max Ki\n+150% Ki Damage\n+150% firework damage\n10% chance to deliver 5x the damage\nEvery time you attack an enemy you get +1% attack boost. Caps at 150%. Restored if not attacking for 20 seconds");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+3500 max Ki\n+150% Ki Damage\n+150% firework damage\n+30 Ki regen\nEvery time you attack an enemy you get +1% attack boost. Caps at 150%. Restored if not attacking for 20 seconds");
 		}
 
         public override void ModifyTooltips(List<TooltipLine> list)
@@ -33,20 +35,38 @@ namespace FargowiltasDLC.Items.Special
 			item.expertOnly = true;
 		}
 
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		{
+			Texture2D texture = mod.GetTexture("Items/Special/PowerStoneEffect");
+			Vector2 offSet = new Vector2(10, 0);
+			Vector2 origin = player.Center;
+
+			if (Main.netMode != 2)
+			{
+				Main.spriteBatch.Draw(texture, origin - offSet - Main.screenPosition, new Rectangle(0,0,34,6), Color.White);
+			}
+		}
+
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			Mod DBZMOD = ModLoader.GetMod("DBZMOD");
+			Mod dBZMOD = ModLoader.GetMod("DBZMOD");
+			MyPlayer DBZModPlayer = player.GetModPlayer<DBZMOD.MyPlayer>(dBZMOD);
 
 			player.meleeDamage += 1.5f;
 			player.magicDamage += 1.5f;
 			player.minionDamage += 1.5f;
 			player.rangedDamage += 1.5f;
 			player.thrownDamage += 1.5f;
-			player.GetModPlayer<DBZMOD.MyPlayer>(DBZMOD).kiDamage += 1.5f;
-			player.GetModPlayer<DBZMOD.MyPlayer>(DBZMOD).kiMax2 += 3500;
+			DBZModPlayer.kiDamage += 1.5f;
+			DBZModPlayer.kiMax2 += 3500;
+			DBZModPlayer.kiRegen += 2;
 			player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f;
-
 			player.GetModPlayer<DLCPlayer>().stoneAbilityPb = true;
+
+			if (DBZModPlayer.isInstantTransmission1Unlocked)
+			{
+				DBZModPlayer.kiRegen += 1;
+			}
 		}
     }
 }

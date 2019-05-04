@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using System.Collections.Generic;
 using DBZMOD;
-using System;
+using Microsoft.Xna.Framework;
 
 namespace FargowiltasDLC
 {
@@ -22,6 +22,7 @@ namespace FargowiltasDLC
 		public double dmgIncreasePS = 0;
 		public bool pwStone;
 		public int counter = 0;
+		public bool fivexdmg;
 		#endregion
 
 		public override void ResetEffects()
@@ -91,8 +92,10 @@ namespace FargowiltasDLC
 		{
 			if (stoneAbilityPb)
 			{
-				this.counter = 0;
-				this.dmgIncreasePS += 0.01;
+				counter = 0;
+				dmgIncreasePS += 0.01;
+
+				Dust.NewDust(player.position, player.width, player.height, 27);
 			}
 		}
 
@@ -102,11 +105,6 @@ namespace FargowiltasDLC
 			{
 				double temp = dmgIncreasePS * damage;
 				damage += (int)temp;
-
-				if (Main.rand.NextBool(10))
-				{
-					damage *= 5;
-				}
 			}
 		}
 
@@ -114,14 +112,13 @@ namespace FargowiltasDLC
 		{
 			if (stoneAbilityPb)
 			{
-				Mod dBZMOD = ModLoader.GetMod("DBZMOD");
-				this.counter++;
+				counter++;
 
-				player.GetModPlayer<MyPlayer>(dBZMOD).kiRegen += counter;
+				Dust.NewDust(player.position, player.width, player.height, 27);
 
 				if (counter == 1200)
 				{
-					this.dmgIncreasePS = 0f;
+					dmgIncreasePS = 0f;
 					counter = 0;
 				}
 			}

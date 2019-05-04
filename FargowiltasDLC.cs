@@ -7,6 +7,7 @@ namespace FargowiltasDLC
 	{
 		#region Internals
 		internal static FargowiltasDLC DLCInstance;
+
 		#endregion
 
 		#region bools
