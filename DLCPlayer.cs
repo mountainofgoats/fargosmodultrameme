@@ -19,10 +19,7 @@ namespace FargowiltasDLC
 
 		#region other variables
 		public bool PlaceholderPet;
-		public double dmgIncreasePS = 0;
 		public bool pwStone;
-		public int counter = 0;
-		public bool fivexdmg;
 		#endregion
 
 		public override void ResetEffects()
@@ -71,57 +68,12 @@ namespace FargowiltasDLC
 
 		public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
 		{
-			if (Main.rand.NextBool(10) && stoneAbilityPb)
-			{
-				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
-
-				player.meleeDamage += 5f;
-				player.GetModPlayer<MyPlayer>(dbzMOD).kiDamage += 5f;
-
-				Main.NewText("true");
-			}
 			Item item = new Item();
 			item.SetDefaults(mod.ItemType("Placeholder"));
 			items.Add(item);
 			Item item2 = new Item();
 			item2.SetDefaults(mod.ItemType("MasochistEX"));
 			items.Add(item2);
-		}
-
-		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
-		{
-			if (stoneAbilityPb)
-			{
-				counter = 0;
-				dmgIncreasePS += 0.01;
-
-				Dust.NewDust(player.position, player.width, player.height, 27);
-			}
-		}
-
-		public override void GetWeaponDamage(Item item, ref int damage)
-		{
-			if (stoneAbilityPb)
-			{
-				double temp = dmgIncreasePS * damage;
-				damage += (int)temp;
-			}
-		}
-
-		public override void PreUpdate()
-		{
-			if (stoneAbilityPb)
-			{
-				counter++;
-
-				Dust.NewDust(player.position, player.width, player.height, 27);
-
-				if (counter == 1200)
-				{
-					dmgIncreasePS = 0f;
-					counter = 0;
-				}
-			}
 		}
 	}
 }

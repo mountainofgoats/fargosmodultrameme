@@ -35,20 +35,32 @@ namespace FargowiltasDLC.Items.Special
 			item.expertOnly = true;
 		}
 
+		public int counter = 0;
+		public bool fivexdmg;
+		public double dmgIncreasePS = 0;
+
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 		{
-			Texture2D texture = mod.GetTexture("Items/Special/PowerStoneEffect");
-			Vector2 offSet = new Vector2(10, 0);
-			Vector2 origin = player.Center;
+			counter = 0;
+			dmgIncreasePS += 0.01;
+		}
 
-			if (Main.netMode != 2)
-			{
-				Main.spriteBatch.Draw(texture, origin - offSet - Main.screenPosition, new Rectangle(0,0,34,6), Color.White);
-			}
+		public override void GetWeaponDamage(Player player, ref int damage)
+		{
+			double temp = dmgIncreasePS * damage;
+			damage += (int)temp;
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
+			counter++;
+
+			if (counter == 1200)
+			{
+				dmgIncreasePS = 0f;
+				counter = 0;
+			}
+
 			Mod dBZMOD = ModLoader.GetMod("DBZMOD");
 			MyPlayer DBZModPlayer = player.GetModPlayer<DBZMOD.MyPlayer>(dBZMOD);
 
