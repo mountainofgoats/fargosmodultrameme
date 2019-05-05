@@ -97,12 +97,32 @@ namespace FargowiltasDLC
 			}
 		}
 
+		public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
+		{
+			if (stoneAbilityPb)
+			{
+				counter = 0;
+				dmgIncreasePS += 0.01;
+
+				if (Main.rand.NextBool(10))
+				{
+					fivexdmg = true;
+				}
+			}
+		}
+
 		public override void GetWeaponDamage(Item item, ref int damage)
 		{
 			if (stoneAbilityPb)
 			{
 				double temp = dmgIncreasePS * damage;
 				damage += (int)temp;
+
+				if (fivexdmg)
+				{
+					damage *= 5;
+					fivexdmg = false;
+				}
 			}
 		}
 

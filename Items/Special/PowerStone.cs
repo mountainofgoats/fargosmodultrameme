@@ -13,17 +13,22 @@ namespace FargowiltasDLC.Items.Special
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Power Stone");
-			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+3500 max Ki\n+150% Ki Damage\n+150% firework damage\n+30 Ki regen\nEvery time you attack an enemy you get +1% attack boost. Caps at 150%. Restored if not attacking for 20 seconds");
+			Tooltip.SetDefault("One of the 6 Infinity Stones, wielding infinite power.\n+150% damage\n+150% firework damage\nEvery time you attack an enemy you get +1% attack boost. Caps at 150%. Restored if not attacking for 20 seconds\n A chance to hit for 5X damage");
 		}
 
         public override void ModifyTooltips(List<TooltipLine> list)
-        {
+		{
             foreach (TooltipLine tooltipLine in list)
             {
                 if (tooltipLine.mod == "Terraria" && tooltipLine.Name == "ItemName")
                 {
                     tooltipLine.overrideColor = new Color?(new Color(60, 36, 181));
-                }
+
+					Mod DBZmod = ModLoader.GetMod("DBZMOD");
+
+					if (DBZmod != null)
+						tooltipLine.text += "\n+3500 max Ki\n+150% Ki Damage\n+30 Ki regen";
+				}
             }
         }
 
@@ -39,27 +44,31 @@ namespace FargowiltasDLC.Items.Special
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			Mod dBZMOD = ModLoader.GetMod("DBZMOD");
-			MyPlayer DBZModPlayer = player.GetModPlayer<DBZMOD.MyPlayer>(dBZMOD);
+			MyPlayer DBZModPlayer = player.GetModPlayer<MyPlayer>(dBZMOD);
 
 			player.meleeDamage += 1.5f;
 			player.magicDamage += 1.5f;
 			player.minionDamage += 1.5f;
 			player.rangedDamage += 1.5f;
 			player.thrownDamage += 1.5f;
-			DBZModPlayer.kiDamage += 1.5f;
-			DBZModPlayer.kiMax2 += 3500;
-			DBZModPlayer.kiRegen += 2;
 			player.GetModPlayer<FireworkClass.FireworkDamagePlayer>().fireworkDamage += 1.5f;
 			player.GetModPlayer<DLCPlayer>().stoneAbilityPb = true;
 
-			if (DBZModPlayer.isInstantTransmission1Unlocked)
+			if (dBZMOD != null)
 			{
-				DBZModPlayer.kiRegen += 1;
+				DBZModPlayer.kiDamage += 1.5f;
+				DBZModPlayer.kiMax2 += 3500;
+				DBZModPlayer.kiRegen += 2;
+
+				if (DBZModPlayer.isInstantTransmission1Unlocked)
+				{
+					DBZModPlayer.kiRegen += 1;
+				}
 			}
 		}
     }
 
-	public class PowerStoneDraw : ModPlayer
+	/*public class PowerStoneDraw : ModPlayer
 	{
 		public static readonly PlayerLayer EffectOnuse = new PlayerLayer("FargowiltasDLC", "EffectOnuse", PlayerLayer.Skin, delegate (PlayerDrawInfo drawInfo)
 		{
@@ -74,6 +83,6 @@ namespace FargowiltasDLC.Items.Special
 
 			Main.playerDrawData.Add(value);
 		});
-	}
+	}*/
 }
 
