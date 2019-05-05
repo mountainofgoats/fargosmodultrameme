@@ -41,8 +41,18 @@ namespace FargowiltasDLC.Items.Special
 
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 		{
-			counter = 0;
-			dmgIncreasePS += 0.01;
+			this.counter = 0;
+			this.dmgIncreasePS += 0.01;
+
+			Main.NewText("echprime");
+		}
+
+		public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
+		{
+			this.counter = 0;
+			this.dmgIncreasePS += 0.01;
+
+			Main.NewText("echprime");
 		}
 
 		public override void GetWeaponDamage(Player player, ref int damage)
@@ -54,6 +64,8 @@ namespace FargowiltasDLC.Items.Special
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
 			counter++;
+
+			Main.NewText(counter);
 
 			if (counter == 1200)
 			{
