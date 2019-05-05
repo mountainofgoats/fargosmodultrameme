@@ -8,5 +8,9 @@ namespace FargowiltasDLC
 		#region bools
 		internal bool DBTLoaded;
 		#endregion
+
+		internal static FargowiltasDLC Instance;
+
+
 	}
 }
