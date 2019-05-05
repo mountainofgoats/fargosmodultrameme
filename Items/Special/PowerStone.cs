@@ -35,44 +35,8 @@ namespace FargowiltasDLC.Items.Special
 			item.expertOnly = true;
 		}
 
-		public int counter = 0;
-		public bool fivexdmg;
-		public double dmgIncreasePS = 0;
-
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
-		{
-			this.counter = 0;
-			this.dmgIncreasePS += 0.01;
-
-			Main.NewText("echprime");
-		}
-
-		public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
-		{
-			this.counter = 0;
-			this.dmgIncreasePS += 0.01;
-
-			Main.NewText("echprime");
-		}
-
-		public override void GetWeaponDamage(Player player, ref int damage)
-		{
-			double temp = dmgIncreasePS * damage;
-			damage += (int)temp;
-		}
-
 		public override void UpdateAccessory(Player player, bool hideVisual)
         {
-			counter++;
-
-			Main.NewText(counter);
-
-			if (counter == 1200)
-			{
-				dmgIncreasePS = 0f;
-				counter = 0;
-			}
-
 			Mod dBZMOD = ModLoader.GetMod("DBZMOD");
 			MyPlayer DBZModPlayer = player.GetModPlayer<DBZMOD.MyPlayer>(dBZMOD);
 

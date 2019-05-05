@@ -130,7 +130,7 @@
     <Content Include="Projectiles\HiveArrow.png" />
     <Content Include="Projectiles\IchorLaser.png" />
     <Content Include="Projectiles\PlaceholderProjectile.png" />
-    <Content Include="Sounds\InfinityGauntlet.wav" />
+    <Content Include="Sounds\InfinityGauntletUsage.mp3" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
