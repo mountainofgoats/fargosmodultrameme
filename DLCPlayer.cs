@@ -112,7 +112,7 @@ namespace FargowiltasDLC
 			{
 				counter++;
 
-				if (counter == 1200)
+				if (counter == 600)
 				{
 					dmgIncreasePS = 0f;
 					counter = 0;

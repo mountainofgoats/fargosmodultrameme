@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
 
 namespace FargowiltasDLC.Items.Special
 {
@@ -57,5 +58,22 @@ namespace FargowiltasDLC.Items.Special
 			}
 		}
     }
+
+	public class PowerStoneDraw : ModPlayer
+	{
+		public static readonly PlayerLayer EffectOnuse = new PlayerLayer("FargowiltasDLC", "EffectOnuse", PlayerLayer.Skin, delegate (PlayerDrawInfo drawInfo)
+		{
+			Player drawPlayer = drawInfo.drawPlayer;
+			Mod mod = ModLoader.GetMod("FargowiltasDLC");
+
+			Texture2D texture = mod.GetTexture("Items/Special/PowerStoneEffect");
+			Vector2 Position = drawInfo.position;
+			Position.Y += 14;
+			Vector2 pos = new Vector2((float)((int)(Position.X - Main.screenPosition.X - (float)(drawPlayer.bodyFrame.Width / 2) + (float)(drawPlayer.width / 2))), (float)((int)(Position.Y - Main.screenPosition.Y + (float)drawPlayer.height - (float)drawPlayer.bodyFrame.Height + 4f))) + drawPlayer.bodyPosition + new Vector2((float)(drawPlayer.bodyFrame.Width / 2), (float)(drawPlayer.bodyFrame.Height / 2));
+			DrawData value = new DrawData(texture, pos, new Rectangle?(drawPlayer.bodyFrame), drawInfo.bodyColor, drawPlayer.bodyRotation, drawInfo.bodyOrigin, 1f, drawInfo.spriteEffects, 0);
+
+			Main.playerDrawData.Add(value);
+		});
+	}
 }
 
