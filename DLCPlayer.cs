@@ -94,8 +94,6 @@ namespace FargowiltasDLC
 			{
 				counter = 0;
 				dmgIncreasePS += 0.01;
-
-				Dust.NewDust(player.position, player.width, player.height, 27);
 			}
 		}
 
@@ -113,8 +111,6 @@ namespace FargowiltasDLC
 			if (stoneAbilityPb)
 			{
 				counter++;
-
-				Dust.NewDust(player.position, player.width, player.height, 27);
 
 				if (counter == 1200)
 				{
