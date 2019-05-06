@@ -74,7 +74,7 @@ namespace FargowiltasDLC.Items.Special
 		}
 	}
 
-	public class PowerStoneDraw : ModPlayer
+	/*public class PowerStoneDraw : ModPlayer
 	{
 		public static readonly PlayerLayer EffectOnUse = new PlayerLayer("FargowiltasDLC", "EffectOnuse", PlayerLayer.Skin, delegate (PlayerDrawInfo drawInfo)
 		{
@@ -100,6 +100,6 @@ namespace FargowiltasDLC.Items.Special
 				layers.Insert(armsLayer + 1, EffectOnUse);
 			}
 		}
-	}
+	}*/
 }
 
