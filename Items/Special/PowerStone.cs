@@ -66,11 +66,17 @@ namespace FargowiltasDLC.Items.Special
 				}
 			}
 		}
-    }
 
-	/*public class PowerStoneDraw : ModPlayer
+		public override void DrawHands(ref bool drawHands, ref bool drawArms)
+		{
+			drawArms = true;
+			drawHands = true;
+		}
+	}
+
+	public class PowerStoneDraw : ModPlayer
 	{
-		public static readonly PlayerLayer EffectOnuse = new PlayerLayer("FargowiltasDLC", "EffectOnuse", PlayerLayer.Skin, delegate (PlayerDrawInfo drawInfo)
+		public static readonly PlayerLayer EffectOnUse = new PlayerLayer("FargowiltasDLC", "EffectOnuse", PlayerLayer.Skin, delegate (PlayerDrawInfo drawInfo)
 		{
 			Player drawPlayer = drawInfo.drawPlayer;
 			Mod mod = ModLoader.GetMod("FargowiltasDLC");
@@ -78,11 +84,22 @@ namespace FargowiltasDLC.Items.Special
 			Texture2D texture = mod.GetTexture("Items/Special/PowerStoneEffect");
 			Vector2 Position = drawInfo.position;
 			Position.Y += 14;
-			Vector2 pos = new Vector2((float)((int)(Position.X - Main.screenPosition.X - (float)(drawPlayer.bodyFrame.Width / 2) + (float)(drawPlayer.width / 2))), (float)((int)(Position.Y - Main.screenPosition.Y + (float)drawPlayer.height - (float)drawPlayer.bodyFrame.Height + 4f))) + drawPlayer.bodyPosition + new Vector2((float)(drawPlayer.bodyFrame.Width / 2), (float)(drawPlayer.bodyFrame.Height / 2));
-			DrawData value = new DrawData(texture, pos, new Rectangle?(drawPlayer.bodyFrame), drawInfo.bodyColor, drawPlayer.bodyRotation, drawInfo.bodyOrigin, 1f, drawInfo.spriteEffects, 0);
+			DrawData value = new DrawData(texture, new Vector2((float)((int)(drawInfo.position.X - Main.screenPosition.X - (float)(drawPlayer.bodyFrame.Width / 2) + (float)(drawPlayer.width / 2))), (float)((int)(drawInfo.position.Y - Main.screenPosition.Y + (float)drawPlayer.height - (float)drawPlayer.bodyFrame.Height + 4f))) + drawPlayer.bodyPosition + new Vector2((float)(drawPlayer.bodyFrame.Width / 2), (float)(drawPlayer.bodyFrame.Height / 2)), new Rectangle?(drawPlayer.bodyFrame), Color.White, drawPlayer.bodyRotation, drawInfo.bodyOrigin, 1f, drawInfo.spriteEffects, 0);
 
+			value.shader = (int)drawPlayer.dye[2].dye;
 			Main.playerDrawData.Add(value);
 		});
-	}*/
+
+		public override void ModifyDrawLayers(List<PlayerLayer> layers)
+		{
+			int armsLayer = layers.FindIndex(PlayerLayer => PlayerLayer.Name.Equals("HandOffAcc"));
+
+			if (armsLayer != -1)
+			{
+				EffectOnUse.visible = true;
+				layers.Insert(armsLayer + 1, EffectOnUse);
+			}
+		}
+	}
 }
 
