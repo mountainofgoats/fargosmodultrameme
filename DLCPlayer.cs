@@ -25,6 +25,11 @@ namespace FargowiltasDLC
 		public bool fivexdmg;
 		#endregion
 
+		public static DLCPlayer ModPlayer(Player player)
+		{
+			return player.GetModPlayer<DLCPlayer>();
+		}
+
 		public override void ResetEffects()
         {
             //Masomode EX items
@@ -37,11 +42,6 @@ namespace FargowiltasDLC
 			pwStone = false;
             PlaceholderPet = false;
         }
-
-		public static DLCPlayer ModPlayer(Player player)
-		{
-			return player.GetModPlayer<DLCPlayer>();
-		}
 
 		public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
         {
@@ -115,8 +115,7 @@ namespace FargowiltasDLC
 		{
 			if (stoneAbilityPb)
 			{
-				double temp = dmgIncreasePS * damage;
-				damage += (int)temp;
+				damage += (int)(damage * dmgIncreasePS);
 
 				if (fivexdmg)
 				{
