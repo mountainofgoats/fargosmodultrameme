@@ -5,6 +5,13 @@ namespace FargowiltasDLC.Items
 {
     public class OceanicElixir : ModItem
     {
+        Mod FargowiltasSouls = ModLoader.GetMod("FargowiltasSouls");
+
+        public override bool Autoload(ref string name)
+        {
+            return FargowiltasSouls != null;
+        }
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Oceanic Elixir");

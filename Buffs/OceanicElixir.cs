@@ -22,7 +22,7 @@ namespace FargowiltasDLC.Buffs
         public override bool Autoload(ref string name, ref string texture)
         {
             texture = "FargowiltasDLC/Buffs/PlaceholderBuff";
-            return true;
+            return FargowiltasSouls != null;
         }
     }
 }

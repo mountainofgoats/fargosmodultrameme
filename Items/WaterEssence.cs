@@ -4,7 +4,13 @@ namespace FargowiltasDLC.Items
 {
     public class WaterEssence : ModItem
     {
+        Mod FargowiltasSouls = ModLoader.GetMod("FargowiltasSouls");
         public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
+
+        public override bool Autoload(ref string name)
+        {
+            return FargowiltasSouls != null;
+        }
 
         public override void SetStaticDefaults()
         {
