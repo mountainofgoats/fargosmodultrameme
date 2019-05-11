@@ -7,12 +7,16 @@ namespace FargowiltasDLC.Items.MasomodeEX
 {
     public class MasochistEX : ModItem
     {
+        Mod FargowiltasSouls = ModLoader.GetMod("FargowiltasSouls");
         public override string Texture => "FargowiltasDLC/Items/PlaceholderItem";
 
         public override void SetStaticDefaults()
         {
+            string tooltip = "Activates/Deactivates Masochist Mode EX\nUse in Expert Mode";
+            if (FargowiltasSouls != null)
+                tooltip = "Activates/Deactivates Masochist Mode EX\nUse in Masochist Mode";
             DisplayName.SetDefault("Abominationn's Gift");
-            Tooltip.SetDefault("Activates/Deactivates Masochist Mode EX\nUse in masochist mode");
+            Tooltip.SetDefault(tooltip);
         }
 
         public override void SetDefaults()
@@ -29,7 +33,7 @@ namespace FargowiltasDLC.Items.MasomodeEX
 
         public override bool CanUseItem(Player player)
         {
-			return FargoWorld.MasochistMode;
+            return FargowiltasSouls != null ? FargoWorld.MasochistMode : Main.expertMode;
         }
 
         public override bool UseItem(Player player)
