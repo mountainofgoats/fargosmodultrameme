@@ -9,26 +9,14 @@ namespace FargowiltasDLC
 {
     public partial class DLCPlayer : ModPlayer
 	{ 
-		#region MasomodeEX Items
+        //Masomode EX Items
 		public bool RottenFlesh;
         public bool BrainyBrain;
         public bool GiantStinger;
         public bool GougedFlesh;
-		public bool stoneAbilityPb;
-		#endregion
 
-		#region other variables
+        //Other
 		public bool PlaceholderPet;
-		public double dmgIncreasePS = 0;
-		public bool pwStone;
-		public int counter = 0;
-		public bool fivexdmg;
-		#endregion
-
-		public static DLCPlayer ModPlayer(Player player)
-		{
-			return player.GetModPlayer<DLCPlayer>();
-		}
 
 		public override void ResetEffects()
         {
@@ -37,9 +25,8 @@ namespace FargowiltasDLC
             BrainyBrain = false;
             GiantStinger = false;
             GougedFlesh = false;
-			stoneAbilityPb = false;
+
 			//Other
-			pwStone = false;
             PlaceholderPet = false;
         }
 
@@ -71,72 +58,12 @@ namespace FargowiltasDLC
 
 		public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
 		{
-			if (Main.rand.NextBool(10) && stoneAbilityPb)
-			{
-				Mod dbzMOD = ModLoader.GetMod("DBZMOD");
-
-				player.meleeDamage += 5f;
-				player.GetModPlayer<MyPlayer>(dbzMOD).kiDamage += 5f;
-
-				Main.NewText("true");
-			}
 			Item item = new Item();
 			item.SetDefaults(mod.ItemType("Placeholder"));
 			items.Add(item);
 			Item item2 = new Item();
 			item2.SetDefaults(mod.ItemType("MasochistEX"));
 			items.Add(item2);
-		}
-
-		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
-		{
-			if (stoneAbilityPb)
-			{
-				counter = 0;
-				dmgIncreasePS += 0.01;
-			}
-		}
-
-		public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
-		{
-			if (stoneAbilityPb)
-			{
-				counter = 0;
-				dmgIncreasePS += 0.01;
-
-				if (Main.rand.NextBool(10))
-				{
-					fivexdmg = true;
-				}
-			}
-		}
-
-		public override void GetWeaponDamage(Item item, ref int damage)
-		{
-			if (stoneAbilityPb)
-			{
-				damage += (int)(damage * dmgIncreasePS);
-
-				if (fivexdmg)
-				{
-					damage *= 5;
-					fivexdmg = false;
-				}
-			}
-		}
-
-		public override void PreUpdate()
-		{
-			if (stoneAbilityPb)
-			{
-				counter++;
-
-				if (counter == 600)
-				{
-					dmgIncreasePS = 0f;
-					counter = 0;
-				}
-			}
 		}
 	}
 }

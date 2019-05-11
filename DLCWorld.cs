@@ -24,10 +24,5 @@ namespace FargowiltasDLC
                 {"MasomodeEX", MasomodeEX }
             };
         }
-
-		public override void PostWorldGen()
-		{
-			base.PostWorldGen(); //need for later Tezeract Room worldgen.
-		}
 	}
 }
