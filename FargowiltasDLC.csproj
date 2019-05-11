@@ -60,12 +60,14 @@
     <Compile Include="DLCGlobalItem.cs" />
     <Compile Include="Items\OceanicElixir.cs" />
     <Compile Include="Items\Placeholder.cs" />
+    <Compile Include="Items\Special\FaceMelter.cs" />
     <Compile Include="Items\WaterEssence.cs" />
     <Compile Include="DLCPlayer.cs" />
     <Compile Include="DLCWorld.cs" />
     <Compile Include="FargowiltasDLC.cs" />
     <Compile Include="NPCs\DLCGlobalNPC.cs" />
     <Compile Include="Projectiles\BeeBullet.cs" />
+    <Compile Include="Projectiles\MusicalNote.cs" />
     <Compile Include="Projectiles\CursedLaser.cs" />
     <Compile Include="Projectiles\IchorLaser.cs" />
     <Compile Include="Projectiles\HiveArrow.cs" />
