@@ -3,11 +3,11 @@ using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace FargowiltasDLC.Items.FireworkClass
+namespace FargowiltasDLC.Items.PartyClass
 {
     // This class handles everything for our custom damage class
     // Any class that we wish to be using our custom damage class will derive from this class, instead of ModItem
-    public abstract class FireworkDamageItem : ModItem
+    public abstract class PartyDamageItem : ModItem
     {
         // Custom items should override this to set their defaults
         public virtual void SafeSetDefaults()
@@ -31,13 +31,13 @@ namespace FargowiltasDLC.Items.FireworkClass
         public override void GetWeaponDamage(Player player, ref int damage)
         {
             // Multiplies the damage by our custom damage multiplier
-            damage = (int)(damage * FireworkDamagePlayer.ModPlayer(player).fireworkDamage + 5E-06f);
+            damage = (int)(damage * PartyDamagePlayer.ModPlayer(player).partyDamage + 5E-06f);
         }
 
         public override void GetWeaponCrit(Player player, ref int crit)
         {
             // Adds crit bonuses
-            crit = crit + FireworkDamagePlayer.ModPlayer(player).fireworkCrit;
+            crit = crit + PartyDamagePlayer.ModPlayer(player).partyCrit;
         }
 
         // Because we want the damage tooltip to show our custom damage, we need to modify it
@@ -53,7 +53,7 @@ namespace FargowiltasDLC.Items.FireworkClass
                 string damageValue = splitText.First();
                 string damageWord = splitText.Last();
                 // Change the tooltip text
-                tt.text = damageValue + " firework " + damageWord;
+                tt.text = damageValue + " party " + damageWord;
             }
         }
     }

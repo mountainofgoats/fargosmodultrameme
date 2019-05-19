@@ -1,21 +1,21 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace FargowiltasDLC.Items.FireworkClass
+namespace FargowiltasDLC.Items.PartyClass
 {
     // This class stores necessary player info for our custom damage class, such as damage multipliers and additions to knockback and crit.
-    public class FireworkDamagePlayer : ModPlayer
+    public class PartyDamagePlayer : ModPlayer
     {
-        public static FireworkDamagePlayer ModPlayer(Player player)
+        public static PartyDamagePlayer ModPlayer(Player player)
         {
-            return player.GetModPlayer<FireworkDamagePlayer>();
+            return player.GetModPlayer<PartyDamagePlayer>();
         }
 
         // Vanilla only really has damage multipliers in code
         // And crit and knockback is usually just added to
         // As a modder, you could make separate variables for multipliers and simple addition bonuses
-        public float fireworkDamage = 1f;
-        public int fireworkCrit;
+        public float partyDamage = 1f;
+        public int partyCrit;
 
         public override void ResetEffects()
         {
@@ -29,8 +29,8 @@ namespace FargowiltasDLC.Items.FireworkClass
 
         private void ResetVariables()
         {
-            fireworkDamage = 1f;
-            fireworkCrit = 0;
+            partyDamage = 1f;
+            partyCrit = 0;
         }
     }
 }
