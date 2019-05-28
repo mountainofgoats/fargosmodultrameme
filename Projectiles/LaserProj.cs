@@ -4,11 +4,11 @@ using Terraria.ModLoader;
 
 namespace FargowiltasDLC.Projectiles
 {
-    public class CursedLaser : ModProjectile
+    public class LaserProj : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cursed Laser");
+            DisplayName.SetDefault("Laser");
         }
 
         public override void SetDefaults()
@@ -27,11 +27,6 @@ namespace FargowiltasDLC.Projectiles
             projectile.scale = 2f;
             projectile.light = 2f;
             aiType = ProjectileID.Bullet;
-        }
-
-        public override void ModifyHitPlayer(Player target, ref int damage, ref bool crit)
-        {
-            target.AddBuff(BuffID.CursedInferno, 450);
         }
     }
 }
